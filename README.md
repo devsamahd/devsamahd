@@ -1,11 +1,24 @@
-### Hi there 👋 
-✨ I'm **Samahd** ✨ 
+<img src="https://github.com/devsamahd/svg.svg/blob/main/svg.svg"/>
 
-<!-- - 🔭 I’m currently working on ... -->
-<!-- - 🌱 I’m currently learning Javascript(MERN) -->
-- 👯 I’m looking to collaborate on projects relating to Javacript(both front-end and back-end)
-- 💬 Ask me about web and mobile development.
-- 📫 How to reach me: ⚡[Devsamahd@gmail.com](devsamahd@gmail.com)
-<!-- - 😄 Pronouns: ...
--  Fun fact: ... -->
 
+
+
+```javascript
+const aboutMe = {
+   pronouns: "he" | "him",
+   code: [Javascript, PHP, HTML, CSS],
+   technologies: {
+      frontEnd: {
+         js: ["React"],
+         css: ["Bootstrap", "Sass"]
+      },
+      backEnd: {
+         js: ["Node", "Express"],
+        },
+      databases: ["MongoDB", "mySQL"],
+      mobile: ["React Native"]
+   },
+   currentOccupation: ["Student"],
+   challenge: "I'm working towards becoming a fullstack software developer",
+};
+```
