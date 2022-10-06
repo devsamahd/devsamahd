@@ -8,6 +8,7 @@ const aboutMe = {
    pronouns: "he" | "him",
    code: [Javascript, PHP, HTML, CSS],
    technologies: {
+      design:{figma},
       frontEnd: {
          js: ["React", "GatsbyJS"],
          css: ["Bootstrap", "Sass"]
@@ -15,10 +16,8 @@ const aboutMe = {
       backEnd: {
          js: ["Node", "Express"],
         },
-      databases: ["MongoDB", "mySQL"],
-      mobile: ["React Native"]
+      databases: ["MongoDB", "mySQL"]
    },
-   currentOccupation: ["Student"],
-   challenge: "I'm working towards becoming a fullstack software developer",
+   challenge: "I'm working towards becoming a better version of me",
 };
 ```
