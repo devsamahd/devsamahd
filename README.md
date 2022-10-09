@@ -8,16 +8,17 @@ const aboutMe = {
    pronouns: "he" | "him",
    code: [Javascript, PHP, HTML, CSS],
    technologies: {
-      design:{figma},
+      design: "figma",
       frontEnd: {
          js: ["React", "GatsbyJS"],
          css: ["Bootstrap", "Sass"]
       },
       backEnd: {
          js: ["Node", "Express"],
+         PHP
         },
       databases: ["MongoDB", "mySQL"]
    },
-   challenge: "I'm working towards becoming a better version of me",
+   challenge: "I'm working towards learning MERN to an advance level",
 };
 ```
