@@ -6,7 +6,7 @@
 ```javascript
 const aboutMe = {
    pronouns: "he" | "him",
-   code: [Javascript, PHP, HTML, CSS],
+   hobbies: [Eat, Sleep, Code, Repeat],
    technologies: {
       design: "figma",
       frontEnd: {
