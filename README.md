@@ -3,8 +3,8 @@
 
 
 
-```javascript
-const aboutMe = {
+```JSON
+{
    pronouns: "he" | "him",
    hobbies: [Eat, Sleep, Code, Repeat],
    technologies: {
@@ -20,5 +20,5 @@ const aboutMe = {
       databases: ["MongoDB", "mySQL"]
    },
    challenge: "I'm working towards learning MERN to an advance level",
-};
+}
 ```
