@@ -1,5 +1,6 @@
 <img src="https://github.com/devsamahd/svg.svg/blob/main/svg.svg"/>
-```JavaScript
+
+```javascript
 console.log('hello world')
 ```
 
