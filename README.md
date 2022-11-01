@@ -28,6 +28,4 @@ console.log('hello world')
 <img src="https://github.com/devicons/devicon/blob/master/icons/express/express-original.svg" width="45"/>
 <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-original.svg" width="45"/>
 </div>
-<br />
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=devsamahd&layout=compact)](https://github.com/devsamahd/github-readme-stats)
 
