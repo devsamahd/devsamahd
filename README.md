@@ -1,8 +1,12 @@
 <img src="https://github.com/devsamahd/svg.svg/blob/main/svg.svg"/>
 
 ```javascript
-console.log('hello world')
+((message)=>{
+  console.log(message)
+})('Hello, Chief!')
 ```
+<br />
+<h3> #Some of the Tools I use</h3>
 <div>
 <img src="https://github.com/devicons/devicon/blob/master/icons/bash/bash-original.svg" width="45"/>
 <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" width="45"/>
@@ -28,4 +32,8 @@ console.log('hello world')
 <img src="https://github.com/devicons/devicon/blob/master/icons/express/express-original.svg" width="45"/>
 <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-original.svg" width="45"/>
 </div>
+<br />
+<h3> #Quickest way to reach me </h3>
+
+ [E-mail me](https://devsamahd@gmail.com)
 
