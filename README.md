@@ -31,6 +31,8 @@
 <img src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg" width="45"/>
 <img src="https://github.com/devicons/devicon/blob/master/icons/express/express-original.svg" width="45"/>
 <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-original.svg" width="45"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/redux/redux-original.svg" width="45"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/redis/redis-original.svg" width="45"/>
 </div>
 <br />
 <h3> #Quickest way to reach me </h3>
