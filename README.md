@@ -8,12 +8,10 @@
 <br />
 <h3> #I have an Arsenal even though I'm a liverpool fan</h3>
 <div>
-<img src="https://github.com/devicons/devicon/blob/master/icons/bash/bash-original.svg" width="45"/>
 <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" width="45"/>
 <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" width="45"/>
 <img src="https://github.com/devicons/devicon/blob/master/icons/gatsby/gatsby-original.svg" width="45"/>
 <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" width="45"/>
-<img src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" width="45"/>
 <img src="https://github.com/devicons/devicon/blob/master/icons/figma/figma-original.svg" width="45"/>
 <img src="https://github.com/devicons/devicon/blob/master/icons/firebase/firebase-plain.svg" width="45"/>
 <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg" width="45"/>
