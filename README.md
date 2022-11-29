@@ -28,7 +28,7 @@
   <img src="https://github.com/devicons/devicon/blob/master/icons/redis/redis-original.svg" width="45"/>
 </div>
 <br />
-### Quickest way to reach me 
+### Quickest way to reach me
 
  [E-mail](https://devsamahd@gmail.com)
 
