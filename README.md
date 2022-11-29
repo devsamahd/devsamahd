@@ -1,12 +1,7 @@
 <img src="https://github.com/devsamahd/svg.svg/blob/main/svg.svg"/>
-
-```javascript
-((message)=>{
-  console.log(message)
-})('Hello, Chief!')
-```
 <br />
-<h3> #I have an Arsenal even though I'm a liverpool fan</h3>
+
+### Some of the Tools I use
 <div>
 <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" width="45"/>
 <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" width="45"/>
@@ -33,7 +28,7 @@
   <img src="https://github.com/devicons/devicon/blob/master/icons/redis/redis-original.svg" width="45"/>
 </div>
 <br />
-<h3> #Quickest way to reach me </h3>
+### Quickest way to reach me 
 
- [E-mail me](https://devsamahd@gmail.com)
+ [E-mail](https://devsamahd@gmail.com)
 
