@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+}
+
+.cus-navbar {
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60vw;
+  margin-left: 20vw;
+  padding: 20px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: larger;
+}
+
+.theme-btn:hover {
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+  font-weight: 600;
+  font-size: large;
+}
+
+@media only screen and (max-height: 30px) {
+  .cus-navbar .navb-item {
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    margin-top: 20px;
+    background-color: rgba(128, 128, 128, 0.2);
+  }
+}/*# sourceMappingURL=all.css.map */

@@ -1,0 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+
+@import './_landingpage';
+@import './navbar';
+@import './footer';
+@import './_responsiveness';
+
