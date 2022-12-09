@@ -1,6 +1,10 @@
+import Header from "../components/header"
+
 const LandingPage = () => {
   return (
-    <div>LandingPage</div>
+    <>
+      <Header />
+    </>
   )
 }
 

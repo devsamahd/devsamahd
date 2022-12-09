@@ -2,16 +2,15 @@ import { Outlet } from 'react-router-dom'
 import Footer from './Footer'
 import Navbar from './Navbar'
 
-const Layout = ({theme, setTheme}) => {
+const Layout = () => {
   return (
-    <>
-    <Navbar theme={theme} setTheme={setTheme} />
-    <main>
-        <Outlet theme={theme} />
-    </main>
-    <Footer />
-    </>
-    
+    <div>
+      <Navbar/>
+        <main className="container">
+            <Outlet/>
+        </main>
+      <Footer />
+    </div>
   )
 }
 

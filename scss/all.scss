@@ -3,9 +3,45 @@
     margin: 0;
     font-family: monospace;
 }
+a{
+    text-decoration: none;
+    color: inherit
+}
+.light{
+    color: black;
+    background-color: white;
+}
+.dark{
+    color: white;
+    background-color: rgb(15, 16, 27);
+}
+#audio{
+    visibility: hidden;
+}
+#audio:hover{
+    cursor: pointer;
+}
+header{
+    height: 80vh;
+    width: 100%;
+    padding-top: 100px;
+    .biosec{
+        h1{
+            margin-top: 200px;
+            font-size: 40px;
+        }
+        p{
+            margin-top: 20px;
+            font-size: large;
+        }
+    }
+    .imageheader{
+        height: 10vh;
+    }
+}
+
 
 @import './_landingpage';
 @import './navbar';
 @import './footer';
 @import './_responsiveness';
-

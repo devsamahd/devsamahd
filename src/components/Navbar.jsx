@@ -1,14 +1,16 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import ThemeButton from './themeButton'
 
-const Navbar = ({theme, setTheme}) => {
+
+const Navbar = () => {
+
   return (
     <nav className='cus-navbar'>
-      <div className="navb-item">Logo</div>
-      <div className="navb-item">About Me</div>
-      <div className="navb-item">Contact</div>
-      <div className="navb-item">Projects</div>
-      <ThemeButton theme={theme} setTheme={setTheme} />
+      <Link className="navb-item"><img src="me.svg" alt="Samahd" /></Link>
+      <Link className="navb-item">About Me</Link>
+      <Link className="navb-item">Contact</Link>
+      <Link className="navb-item">Projects</Link>
+      <ThemeButton />
     </nav>
   )
 }
