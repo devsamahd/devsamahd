@@ -24,7 +24,7 @@ const NavLink = ({ children, link }: { children: ReactNode, link:string }) => (
       textDecoration: 'none',
       bg: useColorModeValue('gray.200', 'gray.700'),
     }}
-    href={`/${link}`}>
+    href={link !== "github"?`/${link}`: "https://github.com/devsamahd"}>
     {children}
   </Link>
 );
