@@ -53,7 +53,7 @@ export default function Nav() {
               as={'nav'}
               spacing={7}
               display={{ base: 'none', md: 'flex' }}>
-            {navlist.map((nav, key) => <><NavLink key={key} link={nav.link}><b>{nav.name}</b></NavLink>&nbsp;</>)}
+            {navlist.map(nav => <><NavLink key={nav.link} link={nav.link}><b>{nav.name}</b></NavLink>&nbsp;</>)}
             </HStack>
           </Center>
 
@@ -69,8 +69,8 @@ export default function Nav() {
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
-              {navlist.map((nav, key) => (
-                <NavLink key={key} link={nav.link}>{nav.name }</NavLink>
+              {navlist.map((nav) => (
+                <NavLink key={nav.link} link={nav.link}>{nav.name }</NavLink>
               ))}
             </Stack>
           </Box>
