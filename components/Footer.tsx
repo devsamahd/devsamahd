@@ -1,60 +1,34 @@
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 import {
     Box,
-    chakra,
     Container,
     Stack,
     Text,
-    useColorModeValue,
-    VisuallyHidden,
-    Center
+    useColorModeValue
   } from '@chakra-ui/react';
-  import { ReactNode } from 'react';
+import Link from 'next/link';
   
-  const SocialButton = ({
-    children,
-    label,
-    href,
-  }: {
-    children: ReactNode;
-    label: string;
-    href: string;
-  }) => {
-    return (
-      <chakra.button
-        rounded={'full'}
-        w={8}
-        h={8}
-        cursor={'pointer'}
-        as={'a'}
-        href={href}
-        display={'inline-flex'}
-        alignItems={'center'}
-        justifyContent={'center'}
-        transition={'background 0.3s ease'}
-        _hover={{
-          bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-        }}>
-        <VisuallyHidden>{label}</VisuallyHidden>
-        {children}
-      </chakra.button>
-    );
-  };
   
   export default function Footer() {
     return (
       <Box
-        color={useColorModeValue('gray.700', 'gray.200')}>
+        color={useColorModeValue('gray.700', 'gray.200')}
+        borderTop={"1px solid"}
+        >
         <Container
           as={Stack}
           maxW={'6xl'}
-          py={4}
-          marginTop={10}
+          marginTop={5}
+          marginBottom={5}
           direction={{ base: 'column', md: 'row' }}
           spacing={10}
           justify={{ base: 'center', md: 'center' }}
           align={{ base: 'center', md: 'center' }}>
           
-          <Text>© {new Date().getFullYear()} Made by DevSamahd.</Text><Text>Twitter</Text><Text>Ko-Fi</Text><Text>Github</Text>
+          <Text>© {new Date().getFullYear()} Made by DevSamahd.</Text>
+          <Text><Link href={"https://www.twitter.com/devsamahd"} >Twitter<ExternalLinkIcon /></Link></Text>
+          <Text><Link href={"https://www.buymeacoffee.com/devsamahd"} >Ko-Fi<ExternalLinkIcon /></Link></Text>
+          <Text><Link href={"https://www.github.com/devsamahd"} >Github<ExternalLinkIcon /></Link></Text>
         </Container>
       </Box>
     );

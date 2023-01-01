@@ -7,7 +7,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: playfair;
+  font-family: cursive;
 }
 html,
 body {
@@ -33,3 +33,12 @@ a {
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
 }
+.inv{
+  display:visible;
+}
+
+ @media only screen and (max-width: 720px) {
+  .inv{
+  display: none;
+}
+ }

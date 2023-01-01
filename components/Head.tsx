@@ -7,6 +7,7 @@ const Meta = ({ title , desc }:{title:string, desc:string}) => {
         <meta name="description" content={desc} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="me.svg" />
+        <link rel="shortcut icon" href="me.svg" type="image/x-icon" />
       </Head>
   )
 }

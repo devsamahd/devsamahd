@@ -11,7 +11,7 @@ import {
   IconButton,
   useDisclosure
 } from '@chakra-ui/react';
-import { MoonIcon, SunIcon, CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
+import { MoonIcon, SunIcon, CloseIcon, HamburgerIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 
 const NavLink = ({ children, link }: { children: ReactNode, link:string }) => (
     
@@ -34,7 +34,7 @@ export default function Nav() {
   const navlist = [{name:'About',link:'about'},{name:'Blog',link:'blog'},{name:'Projects',link:'projects'},{name:'Github',link:'github'}]
   return (
     <>
-      <Box bg={useColorModeValue('white', 'gray.800')} px={4}>
+      <Box bg={useColorModeValue('white', 'gray.800')} px={4} borderBottom={`1px solid ${useColorModeValue("#1A202C", "#FFFFFFEB")}`}>
         <Flex pr={{ base: 0, md: 10 }} pl={{ base: 0, md: 10 }} h={16} alignItems={'center'} justifyContent={'space-between'}>
             
         <IconButton
@@ -52,7 +52,7 @@ export default function Nav() {
               spacing={7}
               align={'right'}
               display={{ base: 'none', md: 'flex' }}>
-            {navlist.map((nav,key) => <><NavLink key={key} link={nav.link}><b>{nav.name}</b></NavLink>&nbsp;</>)}
+            {navlist.map((nav,key) => <><NavLink key={key} link={nav.link}><b>{nav.name === "Github"? <>Github<ExternalLinkIcon /></>: nav.name}</b></NavLink>&nbsp;</>)}
            
 
             <Stack direction={'row'} spacing={7}>
@@ -66,8 +66,8 @@ export default function Nav() {
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
-              {navlist.map((nav) => (
-                <NavLink key={nav.link} link={nav.link}>{nav.name }</NavLink>
+              {navlist.map((nav, key) => (
+                <NavLink key={key} link={nav.link}>{nav.name}</NavLink>
               ))}
             </Stack>
           </Box>

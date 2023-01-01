@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   Box,
   Heading,
@@ -8,114 +7,106 @@ import {
   Center,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { BsArrowUpRight} from 'react-icons/bs';
 import { urlFor } from '../lib/sanity';
-import Link from 'next/link';
+
+export const SectionNumber = ({where, number}: {where: boolean, number: number}) => {
+    return(
+        
+
+        where ? 
+        <Flex
+          align={'center'}
+          _after={{
+            content: '""',
+            borderBottom: '2px solid',
+            borderColor: useColorModeValue("#1A202C", "#FFFFFFEB"),
+            flexGrow: 1,
+            ml: 0,
+        }}
+        >
+        <Box
+        p={5}
+        fontSize={20}
+        fontWeight={600}
+        border={`2px solid ${useColorModeValue("#1A202C", "#FFFFFFEB")}`}
+        borderTop={"1px"}
+        borderLeft={"1px"}
+        >
+            {number}
+        </Box>
+        </Flex>
+        :
+        <Flex
+          align={'center'}
+          _before={{
+            content: '""',
+            borderBottom: '2px solid',
+            borderColor: useColorModeValue("#1A202C", "#FFFFFFEB"),
+            flexGrow: 1,
+            ml: 0,
+        }}
+        >
+        <Box
+        p={5}
+        fontSize={20}
+        fontWeight={600}
+        border={`2px solid ${useColorModeValue("#1A202C", "#FFFFFFEB")}`}
+        borderRight={'1px '}
+        borderBottom={'1px '}
+        >
+            {number}
+        </Box>
+        </Flex>
+    )
+}
+
+
+
 
 const ProjectSection = ({data}:{data:any[]}) => {
     const newData = ((data.reverse()).slice(0,3))
-    const more = data.slice(3)
   return (
-    <div style={{"marginTop":"40px"}}>
-        <Heading size={'lg'} fontFamily={'inherit'}>Projects</Heading>
-        <div className='row'>
+        <div style={{"marginTop":"40px"}}>
+          <SectionNumber where={true} number={1} />
+        
+        <Heading size={'lg'} fontFamily={'Press Start 2P'}>Projects</Heading>
+        <div>
             {
                 newData && newData.map((project:any, key:number) => (
-                    <div className="col-md-4" key={key}>
-                    <Center py={6}> 
+                <div key={key} className="pt-5">
+                    <Heading size={"lg"}>{project.name}</Heading>
+                    <Flex 
+                    color={useColorModeValue('gray.600','gray.200')}
+                    _after={{
+                        content: `"${project.year}"`,
+                        borderBottom: '2px solid',
+                        borderColor: useColorModeValue("#1A202C", "#FFFFFFEB"),
+                        flexGrow: 1,
+                        textAlign:"right",
+                        ml: 1,
+                    }}>{project.description}</Flex>
+                    
                         <Box
-                            w="xs"
-                            rounded={'sm'}
+                            w={"100%"}
                             my={5}
-                            mx={[0, 5]}
                             overflow={'hidden'}
                             bg={useColorModeValue('gray.100','gray.900')}
-                            borderRadius={'lg'}
-                            border={"1px"}
-                            borderColor={useColorModeValue("gray.100","blackAlpha.200")}
+                            borderTop={"30px solid"}
+                            borderLeft={"30px solid"}
+                            borderColor={useColorModeValue("gray.900","gray.100")
+                        }
                             >
-                            <Box h={'200px'} borderColor="black">
                             <Img
-                                src={urlFor(project.mainImage).url()} 
-                                roundedTop={'sm'}
-                                objectFit="cover"
-                                h="full"
-                                w="full"
+                                src={urlFor(project.mainImage).url()}
+                                h="100%"
+                                w="100%"
                                 alt={'Blog Image'}
                             />
-                            </Box>
-                            <Box p={4}>
-
-                            <Box
-                                bg="green.900"
-                                display={'inline-block'}
-                                px={2}
-                                py={1}
-                                color="white"
-                                mb={2}>
-                                <Text fontSize={'xs'} fontWeight="medium">
-                                {project.year}
-                                </Text>
-                            </Box>
-                            
-                            <Heading fontSize={'xl'} noOfLines={1}>
-                                {project.name}
-                            </Heading>
-                            <Text color={'gray.500'} noOfLines={1}>
-                                {project.description}
-                            </Text>
-                            <br />
-                            {project.tags.map((tag:any) => (<><Box
-                                bg="black"
-                                key={tag._id}
-                                display={'inline-block'}
-                                px={2}
-                                py={1}
-                                color="white"
-                                mb={2}>
-                                <Text fontSize={'xs'} fontWeight="medium">
-                                {tag.title}
-                                </Text>
-                            </Box>&nbsp;</>))}
-                            </Box>
-                            <Link href={project.name}>
-                                <Flex
-                                    p={4}
-                                    pt={0}
-                                    alignItems="center"
-                                    justifyContent={'space-between'}
-                                    roundedBottom={'sm'}
-                                    cursor={'pointer'}
-                                    w="full"
-                                    >
-                                    <Text fontSize={'md'} fontWeight={'semibold'}>
-                                    Preview
-                                    </Text>
-                                    <BsArrowUpRight />
-                                </Flex>
-                            </Link>
                         </Box>
-                    </Center>
-                    </div>
+                </div>
                 ))
             }
-            {
-                more && newData.map((project:any) => (
-                    <div className="col-md-4" key={project._id}>
-                    <Center py={6}>
-                    <div className="card p-1" style={{"width" : "20rem", "background": useColorModeValue('#e2e8f0','#171923')}}>
-                        <div className="card-body">
-                            <h6 className="card-subtitle mb-2 text-success">{project.year}</h6>
-                            <Heading size={'md'} style={{"color": "inherit"}}>{project.name}</Heading>
-                            <Text noOfLines={1} fontWeight={400}><span className="card-text text-muted">{project.description}</span></Text>
-                            <br />
-                            <a href="#" className="butn">Code</a>
-                        </div>
-                    </div>
-                    </Center>
-                    </div>
-                ))
-            }
+            
         </div>
     </div>
   )
