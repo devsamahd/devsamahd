@@ -9,8 +9,7 @@ import {
   HStack,
   useColorMode,
   IconButton,
-  useDisclosure,
-  Center,
+  useDisclosure
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon, CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 
@@ -47,23 +46,21 @@ export default function Nav() {
           />
           <Box><img src="me.svg" alt="Samahd" /></Box>
 
-          <Center>
             
           <HStack
               as={'nav'}
               spacing={7}
+              align={'right'}
               display={{ base: 'none', md: 'flex' }}>
-            {navlist.map(nav => <><NavLink key={nav.link} link={nav.link}><b>{nav.name}</b></NavLink>&nbsp;</>)}
-            </HStack>
-          </Center>
+            {navlist.map((nav,key) => <><NavLink key={key} link={nav.link}><b>{nav.name}</b></NavLink>&nbsp;</>)}
+           
 
-          <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
               <Button onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
             </Stack>
-          </Flex>
+             </HStack>
         </Flex>
 
         {isOpen ? (

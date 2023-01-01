@@ -4,8 +4,9 @@ import ProjectSection from '../components/ProjectSection'
 import { Container } from '@chakra-ui/react'
 import { GetStaticProps } from 'next'
 import { SanityClient } from '../lib/sanity'
+import BlogSection from '../components/BlogSection'
 
-export default function Home({data}:{data:any[]}) {
+export default function Home({data, blog}:{data:any[], blog: any[]}) {
   return (
     <>
       <Meta />
@@ -13,6 +14,7 @@ export default function Home({data}:{data:any[]}) {
         <Container maxW={'7xl'}>
         <Header />
         <ProjectSection data={data} />
+        <BlogSection blog={blog} />
         </Container>
       </main>
     </>
@@ -20,6 +22,8 @@ export default function Home({data}:{data:any[]}) {
 }
 
 export const getStaticProps:GetStaticProps = async() => {
+  const blog = await SanityClient.fetch('*[_type == "post"]')
   const data = await SanityClient.fetch('*[_type == "projects"]{..., tags[]->}')
-  return {props: {data}}
+  
+  return {props: {data, blog}}
 }

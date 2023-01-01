@@ -7,7 +7,6 @@ import {
   Flex,
   Center,
   useColorModeValue,
-  HStack,
 } from '@chakra-ui/react';
 import { BsArrowUpRight} from 'react-icons/bs';
 import { urlFor } from '../lib/sanity';
@@ -21,8 +20,8 @@ const ProjectSection = ({data}:{data:any[]}) => {
         <Heading size={'lg'} fontFamily={'inherit'}>Projects</Heading>
         <div className='row'>
             {
-                newData && newData.map((project:any) => (
-                    <div className="col-md-4" key={project._id}>
+                newData && newData.map((project:any, key:number) => (
+                    <div className="col-md-4" key={key}>
                     <Center py={6}> 
                         <Box
                             w="xs"
@@ -37,7 +36,7 @@ const ProjectSection = ({data}:{data:any[]}) => {
                             >
                             <Box h={'200px'} borderColor="black">
                             <Img
-                                src={urlFor(project.mainImage)} 
+                                src={urlFor(project.mainImage).url()} 
                                 roundedTop={'sm'}
                                 objectFit="cover"
                                 h="full"
@@ -68,6 +67,7 @@ const ProjectSection = ({data}:{data:any[]}) => {
                             <br />
                             {project.tags.map((tag:any) => (<><Box
                                 bg="black"
+                                key={tag._id}
                                 display={'inline-block'}
                                 px={2}
                                 py={1}
@@ -107,7 +107,7 @@ const ProjectSection = ({data}:{data:any[]}) => {
                         <div className="card-body">
                             <h6 className="card-subtitle mb-2 text-success">{project.year}</h6>
                             <Heading size={'md'} style={{"color": "inherit"}}>{project.name}</Heading>
-                            <Text noOfLines={1} fontWeight={400}><p className="card-text text-muted">{project.description}</p></Text>
+                            <Text noOfLines={1} fontWeight={400}><span className="card-text text-muted">{project.description}</span></Text>
                             <br />
                             <a href="#" className="butn">Code</a>
                         </div>
