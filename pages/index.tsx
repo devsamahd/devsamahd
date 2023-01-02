@@ -9,7 +9,6 @@ import Tags from '../components/Tags'
 import NewsLetter from '../components/NewsLetter'
 
 export default function Home({data, blog}:{data:any[], blog: any[]}) {
-  console.log(blog)
   return (
     <>
       <Meta />

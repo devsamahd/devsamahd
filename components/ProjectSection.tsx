@@ -1,10 +1,8 @@
 import {
   Box,
   Heading,
-  Text,
   Img,
   Flex,
-  Center,
   useColorModeValue,
 } from '@chakra-ui/react';
 import { urlFor } from '../lib/sanity';
