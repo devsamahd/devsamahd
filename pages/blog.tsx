@@ -4,7 +4,6 @@ import moment from 'moment'
 import Link from 'next/link'
 import React from 'react'
 import Meta from '../components/Head'
-import NewsLetter from '../components/NewsLetter'
 import { SectionNumber } from '../components/ProjectSection'
 import { SanityClient } from '../lib/sanity'
 
@@ -15,8 +14,9 @@ const Blog = ({blogs}: {blogs: any}) => {
     <div className="row">
     <div className="col-md-2"></div>
     <div className='col-md-8'>
+      <br />
     <SectionNumber where={true} number={1} />
-    <Heading size={"lg"}>Writing</Heading>
+    <Heading>Writing</Heading>
 
     <Heading size={"lg"} mt={10}>2022</Heading>
     <Box mt={3}>

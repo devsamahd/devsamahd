@@ -36,7 +36,7 @@ export default function Nav() {
     <>
       <Box bg={useColorModeValue('white', 'gray.800')} px={4} borderBottom={`1px solid ${useColorModeValue("#1A202C", "#FFFFFFEB")}`}>
         <Flex pr={{ base: 0, md: 10 }} pl={{ base: 0, md: 10 }} h={16} alignItems={'center'} justifyContent={'space-between'}>
-        <Box><img src="me.svg" alt="Samahd" /></Box>    
+        <Box><Link href='/'><img src="me.svg" alt="Samahd" /></Link></Box>
         <IconButton
             size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
