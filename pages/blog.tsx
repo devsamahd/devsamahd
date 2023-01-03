@@ -8,6 +8,7 @@ import { SectionNumber } from '../components/ProjectSection'
 import { SanityClient } from '../lib/sanity'
 
 const Blog = ({blogs}: {blogs: any}) => {
+  const art23 = blogs.filter((blo:any)=> moment(blo._createdAt).format("YYYY") == "2023")
   return (
     <>
     <Meta title="Writing | DevSamahd" />
@@ -21,7 +22,18 @@ const Blog = ({blogs}: {blogs: any}) => {
     <Heading size={"lg"} mt={10}>2022</Heading>
     <Box mt={3}>
     {
-      blogs && ((blogs.filter((blo:any) => (moment(blo._createdAt).format("YYYY") == "2022"))).reverse()).map((blog:any) => (
+      art23 && ((art23.reverse()).map((blog:any) => (
+        
+          <Flex justifyContent={'space-between'} >
+            <Text><Link href={`/${blog.slug.current}`}>{blog.title}<LinkIcon /></Link></Text>
+            <Text>{moment(blog._createdAt).format('dddd, D MMM')}</Text>
+          </Flex>
+      )))
+    }
+    </Box>
+    <Box mt={3}>
+    {
+      blogs && ((blogs.filter((blo:any) => (moment(blo._createdAt).format("YYYY") == "2022")))).map((blog:any) => (
         
           <Flex justifyContent={'space-between'} >
             <Text><Link href={`/${blog.slug.current}`}>{blog.title}<LinkIcon /></Link></Text>
@@ -30,6 +42,7 @@ const Blog = ({blogs}: {blogs: any}) => {
       ))
     }
     </Box>
+    
     
     <div className='mb-5 mt-5'>
         <SectionNumber where={false} number={2} />
