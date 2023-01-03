@@ -1,8 +1,23 @@
+import { Heading, Stack } from "@chakra-ui/react"
 import { PortableText } from "@portabletext/react"
 import Meta from "../components/Head"
 import { SanityClient } from "../lib/sanity"
 import {urlFor} from '../lib/sanity'
+import Refractor from 'react-refractor'
+import js from 'refractor/lang/javascript'
 
+Refractor.registerLanguage(js)
+
+const CodeComponent = ({value:{language, code, highlightedLines}}: {value:{language?:any,code?:any,highlightedLines?:any}})=> {
+  return (
+    <Refractor
+      // In this example, `props` is the value of a `code` field
+      language={language}
+      value={code}
+      markers={highlightedLines}
+    />
+  )
+}
 
 const SampleImageComponent = ({value}:{value:any}) => {
   return (
@@ -15,20 +30,27 @@ const SampleImageComponent = ({value}:{value:any}) => {
   )
 }
 
-const components = {
+const components:any = {
   types: {
-    image: SampleImageComponent
+    image: SampleImageComponent,
+    code: CodeComponent
   },
 }
 const postQuery = '*[_type == "post" && slug.current == $slug][0]'
 
 const course = ({post}:{post:any}) => {
   return (
-    <div className='container row mt-5'>
+    <div className='row mt-5'>
+      
       <Meta title={post.title} desc={post.description} />
-      <div className="col-md-1"></div>
-      <div className="col-md-8"><PortableText value={post.body} components={components} /></div>
-      <div className="col-md-3"></div>
+      <div className="col-md-2"></div>
+      <div className="col-md-8 container">
+        <Heading>{post.title}</Heading>
+        <Stack mt={3}>
+        <PortableText value={post.body} components={components}/>
+        </Stack>
+        </div>
+      <div className="col-md-2"></div>
         
     </div>
   )
