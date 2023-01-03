@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/prism-dark.css'
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
 import Nav from '../components/Nav'

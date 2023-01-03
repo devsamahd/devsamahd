@@ -36,7 +36,7 @@ export default function Nav() {
     <>
       <Box bg={useColorModeValue('white', 'gray.800')} px={4} borderBottom={`1px solid ${useColorModeValue("#1A202C", "#FFFFFFEB")}`}>
         <Flex pr={{ base: 0, md: 10 }} pl={{ base: 0, md: 10 }} h={16} alignItems={'center'} justifyContent={'space-between'}>
-            
+        <Box><img src="me.svg" alt="Samahd" /></Box>    
         <IconButton
             size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -44,7 +44,7 @@ export default function Nav() {
             display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <Box><img src="me.svg" alt="Samahd" /></Box>
+          
 
             
           <HStack
@@ -54,9 +54,8 @@ export default function Nav() {
               display={{ base: 'none', md: 'flex' }}>
             {navlist.map((nav,key) => <><NavLink key={key} link={nav.link}><b>{nav.name === "Github"? <>Github<ExternalLinkIcon /></>: nav.name}</b></NavLink>&nbsp;</>)}
            
-
             <Stack direction={'row'} spacing={7}>
-              <Button onClick={toggleColorMode}>
+              <Button onClick={toggleColorMode} bg={"transparent"} _hover={{bg:"transparent"}}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
             </Stack>
@@ -64,14 +63,21 @@ export default function Nav() {
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
-              {navlist.map((nav, key) => (
-                <NavLink key={key} link={nav.link}>{nav.name}</NavLink>
-              ))}
+              <Box pb={4} display={{ md: 'none' }}>
+                <Stack as={'nav'} spacing={4}>
+                  {navlist.map((nav, key) => (
+                    <NavLink key={key} link={nav.link}>{nav.name}</NavLink>
+                  ))}
+                  <Stack direction={'row'} spacing={7}>
+              <Button onClick={toggleColorMode} bg={"transparent"} _hover={{bg:"transparent"}}>
+                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+              </Button>
             </Stack>
-          </Box>
+                </Stack>
+              </Box>
         ) : null}
+
+        
       </Box>
     </>
   );
