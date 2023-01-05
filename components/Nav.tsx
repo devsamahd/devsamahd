@@ -31,7 +31,7 @@ const NavLink = ({ children, link }: { children: ReactNode, link:string }) => (
 export default function Nav() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
-  const navlist = [{name:'About',link:'about'},{name:'Blog',link:'blog'},{name:'Projects',link:'projects'},{name:'Github',link:'github'}]
+  const navlist = [{name:'About',link:'me'},{name:'Blog',link:'blog'},{name:'Projects',link:'projects'},{name:'Github',link:'github'}]
   return (
     <>
       <Box bg={useColorModeValue('white', 'gray.800')} px={4} borderBottom={`1px solid ${useColorModeValue("#1A202C", "#FFFFFFEB")}`}>

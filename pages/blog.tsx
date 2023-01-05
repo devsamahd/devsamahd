@@ -7,7 +7,7 @@ import Meta from '../components/Head'
 import { SectionNumber } from '../components/ProjectSection'
 import { SanityClient } from '../lib/sanity'
 
-const Blog = ({blogs}: {blogs: any}) => {
+const Blog = ({blogs}: {blogs: any}) => { 
   const art23 = blogs.filter((blo:any)=> moment(blo._createdAt).format("YYYY") == "2023")
   return (
     <>
