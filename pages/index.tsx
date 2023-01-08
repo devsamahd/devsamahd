@@ -1,7 +1,7 @@
 import Header from '../components/Header'
 import Meta from '../components/Head'
 import ProjectSection from '../components/ProjectSection'
-import { Container, useColorModeValue } from '@chakra-ui/react'
+import { Box, Container, Stack, Text} from '@chakra-ui/react'
 import { GetStaticProps } from 'next'
 import { SanityClient } from '../lib/sanity'
 import BlogSection from '../components/BlogSection'
@@ -17,35 +17,54 @@ export default function Home({data, blog}:{data:any[], blog: any[]}) {
           <div className="row">
             <style jsx>
               {`
-              .headerone{
-                position: sticky !important;
-                bottom: 0;
-                margin: 0;
-                padding: 0;
-                overflow: auto;
-                border-left: 1px solid ${useColorModeValue("#1A202C", "#FFFFFFEB")};
-                border-right: 1px solid ${useColorModeValue("#1A202C", "#FFFFFFEB")};
-                
-              }
-              .borderLeft{
-                border-left: 1px solid ${useColorModeValue("#1A202C", "#FFFFFFEB")};
-              }
+              
               `}
             </style>
 
-            <div className="col-md-3 headerone">
-              <Header />
+            <div className="col-md-1" >
+              <Box style={{
+                "display":"flex",
+                "flexDirection":"column",
+                "position": "fixed",
+                "zIndex":10,
+                "bottom": 0,
+            }}
+            visibility={{base:"hidden", md:"visible"}}
+            >
+              <Text
+              align={"center"}
+              p={"10px"}
+              style={{
+                "writingMode": "vertical-rl",
+                "display":"inline-block",
+                "margin": "20px auto"
+              }}
+              >
+                Devsamahd@gmail.com
+              </Text>
+              <Stack
+              _after={{
+                content: '""',
+                display: "block",
+                width: "1px",
+                height: "90px",
+                margin: "0px auto",
+                background: "gray.700"
+              }}
+              ></Stack>
+              </Box>
             </div>
 
-            <div className="col-md-7">
+            <div className="col-md-10">
+              <Header />
               <ProjectSection data={data} /><br /><br />
               <BlogSection blog={blog} /><br /><br />
+              <Tags heading='Skills' tags={["Web Development", "Front-End Development", "Back-End Development", "Web2+Web3","UI design", "Agile Methodologies","Mobile Development","Database management"]} />
+              <Tags heading='Tools' tags={["JavaScript","ReactJS","NextJS", "Redux+Toolkit","NodeJS","ExpressJS", "MongoDB","PHP","MySQL","SQL","React Native","CSS/SASS","Bootstrap","Chakra UI","VSCode","XAMPP"]} />
               <NewsLetter />
             </div>
 
-            <div className="col-md-2 borderLeft">
-              <Tags heading='Skills' tags={["Web Development", "Front-End Development", "Back-End Development", "Web2+Web3","UI design", "Agile Methodologies","Mobile Development","Database management"]} />
-              <Tags heading='Tools' tags={["JavaScript","ReactJS","NextJS", "Redux+Toolkit","NodeJS","ExpressJS", "MongoDB","PHP","MySQL","SQL","React Native","CSS/SASS","Bootstrap","Chakra UI","VSCode","XAMPP"]} />
+            <div className="col-md-1">
             </div>
 
           </div>
