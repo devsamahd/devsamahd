@@ -2,16 +2,11 @@ import { ReactNode } from 'react';
 import {
   Box,
   Flex,
-  Link,
-  Button,   
+  Link,  
   useColorModeValue,
-  Stack,
   HStack,
-  useColorMode,
-  IconButton,
-  useDisclosure
 } from '@chakra-ui/react';
-import { MoonIcon, SunIcon, CloseIcon, HamburgerIcon, ExternalLinkIcon } from '@chakra-ui/icons';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 const NavLink = ({ children, link }: { children: ReactNode, link:string }) => (
     
