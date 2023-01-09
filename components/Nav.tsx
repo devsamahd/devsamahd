@@ -46,7 +46,7 @@ export default function Nav() {
                   <span
               style={{
                 "content": '"0"',
-                "color": "navy blue",
+                "color": "lightblue",
                 "textAlign": "right",
                 "marginRight":"5px",
                 "fontFamily":"monospace"
