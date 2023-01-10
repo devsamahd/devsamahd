@@ -9,20 +9,28 @@ import Tags from '../components/Tags'
 import NewsLetter from '../components/NewsLetter'
 
 export default function Home({data, blog}:{data:any[], blog: any[]}) {
+
   return (
     <>
       <Meta />
       <main>
         <Container maxW={'7xl'}>
           <div className="row">
-            <style jsx>
-              {`
-              
-              `}
-            </style>
-
             <div className="col-md-1" >
-              <Box style={{
+              
+            </div>
+
+            <div className="col-md-10">
+              <Header />
+              <ProjectSection data={data} /><br /><br />
+              <BlogSection blog={blog} /><br /><br />
+              <Tags heading='Skills' tags={["Web Development", "Front-End Development", "Back-End Development", "Web2+Web3","UI design", "Agile Methodologies","Mobile Development","Database management"]} />
+              <Tags heading='Tools' tags={["JavaScript","ReactJS","NextJS", "Redux+Toolkit","NodeJS","ExpressJS", "MongoDB","PHP","MySQL","SQL","React Native","CSS/SASS","Bootstrap","Chakra UI","VSCode","XAMPP"]} />
+              <NewsLetter />
+            </div>
+
+            <div className="col-md-1">
+            <Box style={{
                 "display":"flex",
                 "flexDirection":"column",
                 "position": "fixed",
@@ -53,18 +61,6 @@ export default function Home({data, blog}:{data:any[], blog: any[]}) {
               }}
               ></Stack>
               </Box>
-            </div>
-
-            <div className="col-md-10">
-              <Header />
-              <ProjectSection data={data} /><br /><br />
-              <BlogSection blog={blog} /><br /><br />
-              <Tags heading='Skills' tags={["Web Development", "Front-End Development", "Back-End Development", "Web2+Web3","UI design", "Agile Methodologies","Mobile Development","Database management"]} />
-              <Tags heading='Tools' tags={["JavaScript","ReactJS","NextJS", "Redux+Toolkit","NodeJS","ExpressJS", "MongoDB","PHP","MySQL","SQL","React Native","CSS/SASS","Bootstrap","Chakra UI","VSCode","XAMPP"]} />
-              <NewsLetter />
-            </div>
-
-            <div className="col-md-1">
             </div>
 
           </div>

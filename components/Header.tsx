@@ -17,40 +17,35 @@ import { useRef } from 'react';
 
  return (
       <>
-        <Flex>
-            
-              <Image
-                alt={'Hero Image'}
-                fit={'cover'}
-                align={'center'}
-                w={'100%'}
-                src={
-                  'devsamahd.svg'
-                }
-              />
-          </Flex>
-          <Container maxW={'7xl'}>
+      <div  style={{"maxWidth":"80%", "marginTop":"90px"}}>
         <Stack
-          align={'center'}
           py={{ base: 10, md: 10}}
           >
           <Stack flex={1} >
             <Heading
-              lineHeight={1.1}
-              fontWeight={600}
-              fontSize={{ base: 'xl', sm: 'xl', lg: 'md' }}>
+              fontWeight={400}
+              fontSize={{ base: 'sm', sm: 'sm', lg: 'sm' }}
+              >
               <Text as={'span'} position={'relative'} >
-                <Flex><p className="start">Hello, I'm Samahd!</p> &nbsp; {useColorModeValue(<img src="sound.svg" alt="" onClick={playintro}/>, <img src="soundl.svg" alt="" onClick={playintro}  /> )}</Flex>
-                <audio src="intro.mp3" ref={audRef}></audio>
+                <Flex justifyContent={'space-between'}>
+                  <p className="start mt-2" >Hello, my name is</p> <img src="sound.svg" alt="" onClick={playintro}/>
+                  <audio src="intro.mp3" ref={audRef}></audio>
+                </Flex>
               </Text>
             </Heading>
-            <Text color={useColorModeValue('gray.600','gray.200')}>
-              Hello, I'm a passionate software developer with a desire for writing clean, effective, efficient and scalable programs. <br />
-              This is my digital graden where I write about what I love and share my knowledge with others.
+            <Heading size={'4xl'}>
+              AO Abdulsalam.
+            </Heading>
+            <Heading size={'3xl'} color={'gray.700'}>
+              I build things for the web.
+            </Heading>
+            <Text color={'gray.600'} width={{base:'100%', md:'65%'}}>
+              I'm a passionate software developer with a desire for writing clean, effective, efficient and scalable programs.
+              This is my digital garden where I write about what I love and share my knowledge with others.
             </Text>
           </Stack>
         </Stack>
-        </Container>
+        </div>
       </>
     );
   }

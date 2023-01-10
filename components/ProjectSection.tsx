@@ -4,57 +4,33 @@ import {
   Img,
   Flex,
   useColorModeValue,
+  Text,
 } from '@chakra-ui/react';
 import { urlFor } from '../lib/sanity';
 
-export const SectionNumber = ({where, number}: {where: boolean, number: number}) => {
+export const SectionNumber = ({ number, title}: { number: number, title: string}) => {
     return(
-        
-
-        where ? 
         <Flex
           align={'center'}
           _after={{
             content: '""',
-            borderBottom: '2px solid',
-            borderColor: useColorModeValue("#1A202C", "#FFFFFFEB"),
+            borderBottom: '1px solid',
+            borderColor: 'gray.700',
             flexGrow: 1,
-            ml: 0,
+            ml: 0
         }}
         >
-        <Box
-        p={5}
-        fontSize={20}
-        fontWeight={600}
-        border={`2px solid ${useColorModeValue("#1A202C", "#FFFFFFEB")}`}
-        borderTop={"1px"}
-        borderLeft={"1px"}
-        >
-            {number}
-        </Box>
-        </Flex>
-        :
         <Flex
-          align={'center'}
-          _before={{
-            content: '""',
-            borderBottom: '2px solid',
-            borderColor: useColorModeValue("#1A202C", "#FFFFFFEB"),
-            flexGrow: 1,
-            ml: 0,
-        }}
-        >
-        <Box
         p={5}
         fontSize={20}
         fontWeight={600}
-        border={`2px solid ${useColorModeValue("#1A202C", "#FFFFFFEB")}`}
-        borderRight={'1px '}
-        borderBottom={'1px '}
+        fontFamily={'monospace'}
+        color="lightblue"
         >
-            {number}
-        </Box>
+            0{number}.&nbsp;<Text color={'gray.900'} fontSize={'3xl'}>{title}</Text>
         </Flex>
+        </Flex>
+        
     )
 }
 
@@ -65,9 +41,7 @@ const ProjectSection = ({data}:{data:any[]}) => {
     const newData = ((data.reverse()).slice(0,3))
   return (
         <div style={{"marginTop":"40px"}}>
-          <SectionNumber where={true} number={1} />
-        
-        <Heading size={'lg'} fontFamily={'Press Start 2P'}>Projects</Heading>
+          <SectionNumber number={1} title={'Projects'} />
         <div>
             {
                 newData && newData.map((project:any, key:number) => (
