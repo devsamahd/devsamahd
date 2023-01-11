@@ -15,9 +15,10 @@ export const SectionNumber = ({ number, title}: { number: number, title: string}
           _after={{
             content: '""',
             borderBottom: '1px solid',
-            borderColor: 'gray.700',
+            borderColor: 'gray.300',
             flexGrow: 1,
-            ml: 0
+            ml: 0,
+            mr: "50%"
         }}
         >
         <Flex
@@ -25,7 +26,7 @@ export const SectionNumber = ({ number, title}: { number: number, title: string}
         fontSize={20}
         fontWeight={600}
         fontFamily={'monospace'}
-        color="lightblue"
+        color={'blue.400'}
         >
             0{number}.&nbsp;<Text color={'gray.900'} fontSize={'3xl'}>{title}</Text>
         </Flex>
@@ -41,7 +42,7 @@ const ProjectSection = ({data}:{data:any[]}) => {
     const newData = ((data.reverse()).slice(0,3))
   return (
         <div style={{"marginTop":"40px"}}>
-          <SectionNumber number={1} title={'Projects'} />
+          <SectionNumber number={3} title={`Some things I've built`} />
         <div>
             {
                 newData && newData.map((project:any, key:number) => (

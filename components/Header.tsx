@@ -3,9 +3,7 @@ import {
     Flex,
     Heading,
     Text,
-    Image,
-    useColorModeValue,
-    Container,
+    Button,
   } from '@chakra-ui/react';
 import { useRef } from 'react';
   
@@ -17,7 +15,7 @@ import { useRef } from 'react';
 
  return (
       <>
-      <div  style={{"maxWidth":"80%", "marginTop":"90px"}}>
+      <div  style={{"maxWidth":"80%", "marginTop":"150px"}}>
         <Stack
           py={{ base: 10, md: 10}}
           >
@@ -39,10 +37,14 @@ import { useRef } from 'react';
             <Heading size={'3xl'} color={'gray.700'}>
               I build things for the web.
             </Heading>
-            <Text color={'gray.600'} width={{base:'100%', md:'65%'}}>
+            <Text color={'gray.600'} width={{base:'100%', md:'72%'}} letterSpacing={"wide"} fontWeight={"500"} pt={30}>
               I'm a passionate software developer with a desire for writing clean, effective, efficient and scalable programs.
               This is my digital garden where I write about what I love and share my knowledge with others.
             </Text>
+            <Flex pt={10}>
+              <Button p={7} m={"3"} width={"sm"} border={"2px solid #1a202c"} color={"#1a202c"}  background={'transparent'}>Portfolio</Button>
+              <Button p={7} m={"3"} width={"sm"} color={"white"}  background={"#1a202c"} _hover={{bg:"gray"}}>Contact me!</Button>
+            </Flex>
           </Stack>
         </Stack>
         </div>

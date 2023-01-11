@@ -2,8 +2,8 @@ import { Heading, Tag } from "@chakra-ui/react"
 
 const Tags = ({tags, heading}:{tags:string[], heading:string}) => {
   return (
-    <div className="mt-5">
-        <Heading size={"lg"} textAlign={"right"} mb={"3"}>{heading}</Heading>
+    <div className="mt-1">
+        <Heading size={"lg"} textAlign={"left"} mb={"3"}>{heading}</Heading>
         {
             tags.map(tag =>( 
                 <Tag

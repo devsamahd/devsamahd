@@ -1,6 +1,6 @@
 import Header from '../components/Header'
 import Meta from '../components/Head'
-import ProjectSection from '../components/ProjectSection'
+import ProjectSection, { SectionNumber } from '../components/ProjectSection'
 import { Box, Container, Stack, Text} from '@chakra-ui/react'
 import { GetStaticProps } from 'next'
 import { SanityClient } from '../lib/sanity'
@@ -24,8 +24,16 @@ export default function Home({data, blog}:{data:any[], blog: any[]}) {
               <Header />
               <ProjectSection data={data} /><br /><br />
               <BlogSection blog={blog} /><br /><br />
-              <Tags heading='Skills' tags={["Web Development", "Front-End Development", "Back-End Development", "Web2+Web3","UI design", "Agile Methodologies","Mobile Development","Database management"]} />
-              <Tags heading='Tools' tags={["JavaScript","ReactJS","NextJS", "Redux+Toolkit","NodeJS","ExpressJS", "MongoDB","PHP","MySQL","SQL","React Native","CSS/SASS","Bootstrap","Chakra UI","VSCode","XAMPP"]} />
+
+
+              
+              <div className="row">
+                <SectionNumber number={5} title={`Arsenal`} />
+                <div className="col-md-6"><Tags heading='Skills' tags={["Web Development", "Front-End Development", "Back-End Development", "Web2+Web3","UI design", "Agile Methodologies","Mobile Development","Database management"]} /></div>
+                <div className="col-md-6"><Tags heading='Tools' tags={["JavaScript","ReactJS","NextJS", "Redux+Toolkit","NodeJS","ExpressJS", "MongoDB","PHP","MySQL","SQL","React Native","CSS/SASS","Bootstrap","Chakra UI","VSCode","XAMPP"]} /></div>
+              </div><br />
+              
+
               <NewsLetter />
             </div>
 
@@ -37,7 +45,7 @@ export default function Home({data, blog}:{data:any[], blog: any[]}) {
                 "zIndex":10,
                 "bottom": 0,
             }}
-            visibility={{base:"hidden", md:"visible"}}
+           visibility={{base:"hidden", md:"visible"}}
             >
               <Text
               align={"center"}
@@ -45,7 +53,12 @@ export default function Home({data, blog}:{data:any[], blog: any[]}) {
               style={{
                 "writingMode": "vertical-rl",
                 "display":"inline-block",
-                "margin": "20px auto"
+                "margin": "20px auto",
+                "fontFamily":"monospace",
+                fontWeight:"600"
+              }}
+              _hover={{
+                paddingBottom:"30px"
               }}
               >
                 Devsamahd@gmail.com

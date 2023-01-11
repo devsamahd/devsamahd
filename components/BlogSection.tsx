@@ -9,7 +9,7 @@ import { SectionNumber } from './ProjectSection'
 const BlogSection = ({blog}:{blog:any[]}) => {
   return (
     <>
-    <SectionNumber where={false} number={2} />
+    <SectionNumber title='Technical Write-up' number={4} />
     <Heading size={'lg'} fontFamily={'inherit'} textAlign="right">Technical WriteUps</Heading>
     <div className="mt-5 mb-5">
         {blog && (blog.slice(0,5)).map((post:any)=>(

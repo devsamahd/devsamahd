@@ -27,7 +27,7 @@ export default function Nav() {
   const navlist = [{name:'About',link:'me'},{name:'Experience',link:'experience'},{name:'Projects',link:'projects'},{name:'Github',link:'github'}]
   return (
     <>
-      <Box ml={"20vw"} width={"60vw"} bg={"rgba(0,0,0,.25)"} borderRadius={10} px={4} mt={4} position={"fixed"} visibility={{base:"hidden", md:"visible"}}>
+      <Box ml={"20vw"} width={"60vw"} bg={"rgba(0,0,0,.20)"} borderRadius={10} px={4} mt={4} position={"fixed"} visibility={{base:"hidden", md:"visible"}}>
         <Flex pr={{ base: 0, md: 10 }} pl={{ base: 0, md: 10 }} h={16} alignItems={'center'} justifyContent={'space-between'}>
         <Box><Link href='/'><img src="me.svg" alt="Samahd" /></Link></Box>
          
@@ -41,7 +41,7 @@ export default function Nav() {
                   <span
               style={{
                 "content": '"0"',
-                "color": "lightblue",
+                "color": "#4299e1",
                 "textAlign": "right",
                 "marginRight":"5px",
                 "fontFamily":"monospace"
