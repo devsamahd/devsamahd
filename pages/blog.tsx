@@ -16,8 +16,7 @@ const Blog = ({blogs}: {blogs: any}) => {
     <div className="col-md-2"></div>
     <div className='col-md-8'>
       <br />
-    <SectionNumber where={true} number={1} />
-    <Heading>Writing</Heading>
+    <SectionNumber title='Writing' number={1} />
 
     <Heading size={"lg"} mt={10}>2022</Heading>
     <Box mt={3}>
@@ -45,8 +44,7 @@ const Blog = ({blogs}: {blogs: any}) => {
     
     
     <div className='mb-5 mt-5'>
-        <SectionNumber where={false} number={2} />
-        <Heading size={'lg'} fontFamily={'inherit'} textAlign="left">Newsletter</Heading>
+        <SectionNumber title='Newsletter' number={2} />
         <Text>Sign up to get updates when I write something new. No spam ever.</Text><br /><br />
         <Link href={"https://samahd.substack.com"}><Button>Subscribe to Newsletter</Button></Link>
     </div>

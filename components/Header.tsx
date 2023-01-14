@@ -4,6 +4,7 @@ import {
     Heading,
     Text,
     Button,
+    Box,
   } from '@chakra-ui/react';
 import { useRef } from 'react';
   
@@ -15,7 +16,7 @@ import { useRef } from 'react';
 
  return (
       <>
-      <div  style={{"maxWidth":"80%", "marginTop":"150px"}}>
+      <Box maxWidth={{base: "100%", md:"80%"}} style={{ "marginTop":"150px"}}>
         <Stack
           py={{ base: 10, md: 10}}
           >
@@ -38,7 +39,7 @@ import { useRef } from 'react';
               I build things for the web.
             </Heading>
             <Text color={'gray.600'} width={{base:'100%', md:'72%'}} letterSpacing={"wide"} fontWeight={"500"} pt={30}>
-              I'm a passionate software developer with a desire for writing clean, effective, efficient and scalable programs.
+              I'm a passionate software developer with a desire for writing clean, effective, efficient and scalable softaware programs.
               This is my digital garden where I write about what I love and share my knowledge with others.
             </Text>
             <Flex pt={10}>
@@ -47,7 +48,7 @@ import { useRef } from 'react';
             </Flex>
           </Stack>
         </Stack>
-        </div>
+        </Box>
       </>
     );
   }

@@ -2,18 +2,16 @@ import { ExternalLinkIcon, MinusIcon } from '@chakra-ui/icons'
 import { Heading, Text, Link, List, ListItem} from '@chakra-ui/react'
 import React from 'react'
 import Meta from '../components/Head'
-import { SectionNumber } from '../components/ProjectSection'
 
 const About = () => {
   
   return (
     <>
     <Meta />
-    <div className="row">
+    <div className="row pt-5 container">
       <div className="col-md-2"></div>
-      <div className="col-md-9 container">
+      <div className="col-md-9 pt-5 container">
           <br />
-          <SectionNumber where={true} number={1} />
           <br />
           <Heading>Abdulsalam Abdulsamad</Heading>
           <Heading size={"md"} fontWeight={500}><i>Software Developer Extra-Ordinaire</i></Heading>

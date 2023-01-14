@@ -18,7 +18,7 @@ export const SectionNumber = ({ number, title}: { number: number, title: string}
             borderColor: 'gray.300',
             flexGrow: 1,
             ml: 0,
-            mr: "50%"
+            mr: {base:"0%", md:"50%"}
         }}
         >
         <Flex
@@ -49,11 +49,11 @@ const ProjectSection = ({data}:{data:any[]}) => {
                 <div key={key} className="pt-5">
                     <Heading size={"lg"}>{project.name}</Heading>
                     <Flex 
-                    color={useColorModeValue('gray.600','gray.200')}
+                    color='gray.600'
                     _after={{
                         content: `"${project.year}"`,
                         borderBottom: '2px solid',
-                        borderColor: useColorModeValue("#1A202C", "#FFFFFFEB"),
+                        borderColor: "#1A202C",
                         flexGrow: 1,
                         textAlign:"right",
                         ml: 1,

@@ -1,5 +1,5 @@
 import { LinkIcon } from '@chakra-ui/icons'
-import { Box, Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react'
+import { Heading, Text } from '@chakra-ui/react'
 import moment from 'moment'
 import Link from 'next/link'
 import { urlFor } from '../lib/sanity'
@@ -10,7 +10,6 @@ const BlogSection = ({blog}:{blog:any[]}) => {
   return (
     <>
     <SectionNumber title='Technical Write-up' number={4} />
-    <Heading size={'lg'} fontFamily={'inherit'} textAlign="right">Technical WriteUps</Heading>
     <div className="mt-5 mb-5">
         {blog && (blog.slice(0,5)).map((post:any)=>(
         <div className="mt-2" key={post.slug.current} style={{"borderBottom":"1px solid"}}>

@@ -7,18 +7,61 @@ import { SanityClient } from '../lib/sanity'
 import BlogSection from '../components/BlogSection'
 import Tags from '../components/Tags'
 import NewsLetter from '../components/NewsLetter'
+import useMousePosition from '../context/useMousePos'
 
 export default function Home({data, blog}:{data:any[], blog: any[]}) {
-
+  data = []
+  blog = []
+  const {x,y} = useMousePosition()
   return (
     <>
       <Meta />
       <main>
         <Container maxW={'7xl'}>
           <div className="row">
-            <div className="col-md-1" >
-              
+            <div className="col-md-1">
+
+
+            <Box style={{
+                "display":"flex",
+                "flexDirection":"column",
+                "position": "fixed",
+                "zIndex":10,
+                "bottom": 0,
+            }}
+           visibility={{base:"hidden", md:"visible"}}
+            >
+              {x}
+              <Text
+              align={"center"}
+              p={"10px"}
+              style={{
+                "writingMode": "vertical-rl",
+                "display":"inline-block",
+                "marginBottom": "20px",
+                "fontFamily":"monospace",
+                fontWeight:"600"
+
+              }}
+              _hover={{
+                paddingBottom:"30px",
+              }}
+              >
+                {y}
+              </Text>
+              <Stack
+              _after={{
+                content: '""',
+                display: "block",
+                width: "1px",
+                height: "90px",
+                margin: "0px auto",
+                background: "gray.700"
+              }}
+              ></Stack>
+              </Box>
             </div>
+
 
             <div className="col-md-10">
               <Header />
@@ -56,9 +99,10 @@ export default function Home({data, blog}:{data:any[], blog: any[]}) {
                 "margin": "20px auto",
                 "fontFamily":"monospace",
                 fontWeight:"600"
+
               }}
               _hover={{
-                paddingBottom:"30px"
+                paddingBottom:"30px",
               }}
               >
                 Devsamahd@gmail.com
@@ -84,9 +128,9 @@ export default function Home({data, blog}:{data:any[], blog: any[]}) {
   )
 }
 
-export const getStaticProps:GetStaticProps = async() => {
-  const blog = await SanityClient.fetch('*[_type == "post"]')
-  const data = await SanityClient.fetch('*[_type == "projects"]{..., tags[]->}')
+// export const getStaticProps:GetStaticProps = async() => {
+//   const blog = await SanityClient.fetch('*[_type == "post"]')
+//   const data = await SanityClient.fetch('*[_type == "projects"]{..., tags[]->}')
   
-  return {props: {data, blog}}
-}
+//   return {props: {data, blog}}
+// }
