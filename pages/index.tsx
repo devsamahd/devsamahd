@@ -8,6 +8,7 @@ import BlogSection from '../components/BlogSection'
 import Tags from '../components/Tags'
 import NewsLetter from '../components/NewsLetter'
 import useMousePosition from '../context/useMousePos'
+import Experience from '../components/Experience'
 
 export default function Home({data, blog}:{data:any[], blog: any[]}) {
   data = []
@@ -65,6 +66,7 @@ export default function Home({data, blog}:{data:any[], blog: any[]}) {
 
             <div className="col-md-10">
               <Header />
+              <Experience />
               <ProjectSection data={data} /><br /><br />
               <BlogSection blog={blog} /><br /><br />
 
@@ -78,6 +80,8 @@ export default function Home({data, blog}:{data:any[], blog: any[]}) {
               
 
               <NewsLetter />
+
+              
             </div>
 
             <div className="col-md-1">

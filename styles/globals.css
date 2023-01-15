@@ -73,3 +73,13 @@ a {
   z-index: 999;
   pointer-events: none;
 }
+
+.expbtn{
+  padding: 10px;
+  width: 100px;
+}
+.expbtn:active{
+  background-color:  rgba(31, 30, 30, 0.4);
+  padding: 10px;
+  width: 100px;
+}
