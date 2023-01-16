@@ -12,7 +12,7 @@ Refractor.registerLanguage(js)
 const CodeComponent = ({value:{language, code, highlightedLines}}: {value:{language?:any,code?:any,highlightedLines?:any}})=> {
   return (
     <Refractor
-      // In this example, `props` is the value of a `code` field
+      // In this example, `props` is the value of a `code` fi
       language={language}
       value={code}
       markers={highlightedLines}
