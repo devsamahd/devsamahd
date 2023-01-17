@@ -10,13 +10,15 @@ const ProjectTab = () => {
         <div className='pt-5'>
           <SectionNumber title='Experience' number={2}/>
           <div className="d-flex align-items-start">
-            <div className="nav flex-column me-5" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <div className="active expbtn" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</div>
-              <div className="expbtn" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</div>
+            <div className="nav tabss flex-column me-5" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <div className="active expbtn" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Frixx</div>
+              <div className="expbtn" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">NUESA KWASU</div>
+              <div className="expbtn" id="v-pills-third-tab" data-bs-toggle="pill" data-bs-target="#v-pills-third" role="tab" aria-controls="v-pills-third" aria-selected="false">EON</div>
             </div>
             <div className="tab-content" id="v-pills-tabContent">
-              <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">This is some placeholder content the Messages tab's associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.</div>
+              <div className="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"></div>
               <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">2</div>
+              <div className="tab-pane fade" id="v-pills-third" role="tabpanel" aria-labelledby="v-pills-third-tab">3</div>
             </div>
           </div>
         </div>
