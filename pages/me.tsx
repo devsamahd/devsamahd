@@ -73,7 +73,7 @@ const About = () => {
 
               <ListItem>
                 <MinusIcon />
-                <b>PC:</b> 10th Gen HP 15 15.6" core i5 1TB HDD 5gb RAM
+                <b>PC:</b> 10th Gen HP 15 15.6" core i5 1TB HDD 8gb RAM
               </ListItem>
 
 
