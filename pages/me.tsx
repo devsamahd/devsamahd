@@ -51,7 +51,7 @@ const About = () => {
               </List><br /><br /><br />
 
               <Heading size={'lg'}>Tools and Skills</Heading><br /> <hr /><br />
-              <Text fontSize={25}>Software and Hardware </Text>
+              <Text fontSize={25}>Software and Hardware</Text>
               <List spacing={3}>
 
               <ListItem>
