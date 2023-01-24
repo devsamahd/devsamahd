@@ -9,7 +9,7 @@ import { SectionNumber } from './ProjectSection'
 const BlogSection = ({blog}:{blog:any[]}) => {
   return (
     <>
-    <SectionNumber title='Technical Write-up' number={4} />
+    <SectionNumber title='Technical Write-up' number={2} />
     <div className="mt-5 mb-5">
         {blog && (blog.slice(0,5)).map((post:any)=>(
         <div className="mt-2" key={post.slug.current} style={{"borderBottom":"1px solid"}}>

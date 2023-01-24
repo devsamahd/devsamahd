@@ -42,7 +42,7 @@ const ProjectSection = ({data}:{data:any[]}) => {
     const newData = ((data.reverse()).slice(0,3))
   return (
         <div style={{"marginTop":"40px"}}>
-          <SectionNumber number={3} title={`Some things I've built`} />
+          <SectionNumber number={1} title={`Some things I've built`} />
         <div>
             {
                 newData && newData.map((project:any, key:number) => (

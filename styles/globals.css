@@ -52,7 +52,7 @@ a {
   height: 30px;
   background-color: rgba(31, 30, 30, 0.4);
   border-radius: 100%;
-  transform: translate(-50%, -50%);
+  transform: translate(-15%, -15%);
   -webkit-transition-duration: 100ms;
   transition-duration: 100ms;
   -webkit-transition-timing-function: ease-out;
@@ -60,24 +60,44 @@ a {
   will-change: width, height, transform, border;
   z-index: 999;
   pointer-events: none;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-15%, -15%);
+  -moz-transform: translate(-15%, -15%);
+  -ms-transform: translate(-15%, -15%);
+  -o-transform: translate(-15%, -15%);
 }
 .dot {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 8px;
-  height: 8px;
-  background-color: #212529;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  padding: 2px;
   border-radius: 100%;
   transform: translate(-50%, -50%);
   z-index: 999;
   pointer-events: none;
+  animation-name: rot;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
+@keyframes rot {
+  0%{
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+100%{
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+}
 .expbtn{
   padding: 10px;
   width: 100px;

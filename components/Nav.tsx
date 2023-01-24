@@ -38,11 +38,25 @@ export default function Nav() {
     prevScrollpos = currentScrollPos;
   }
   })
+
+  const navRef1 = useRef<any>(null)
+  useEffect(()=>{
+    let prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      navRef1.current.style.top = "0";
+    } else {
+      navRef1.current.style.top = "-100px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+  })
   
 
   return (
     <>
-      <Box ml={"20vw"} width={"60vw"} bg={"rgba(0,0,0,.20)"} borderRadius={10} px={4} mt={4} position={"fixed"} visibility={{base:"hidden", md:"visible"}} transition={"top 0.7s"} ref={navRef}>
+      <Box ml={"20vw"} width={"60vw"} bg={"rgba(0,0,0,.20)"} borderRadius={10} px={4} mt={4} position={"fixed"}  transition={"top 0.7s"} visibility={{base:"hidden", md:"visible"}} ref={navRef1}>
         <Flex pr={{ base: 0, md: 10 }} pl={{ base: 0, md: 10 }} h={16} alignItems={'center'} justifyContent={'space-between'}>
         <Box><Link href='/'><img src="me.svg" alt="Samahd" /></Link></Box>
          
