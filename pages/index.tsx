@@ -65,10 +65,10 @@ export default function Home({data, blog}:{data:any[], blog: any[]}) {
 
 
             <div className="col-md-10">
-              <Header />
+              <Header /><br /><br />
               {/* <Experience /> */}
-              <ProjectSection data={data} /><br /><br />
-              <BlogSection blog={blog} /><br /><br />
+              <ProjectSection data={data} /><br /><br /><br />
+              <BlogSection blog={blog} /><br /><br /><br />
 
 
               
@@ -132,9 +132,9 @@ export default function Home({data, blog}:{data:any[], blog: any[]}) {
   )
 }
 
-// export const getStaticProps:GetStaticProps = async() => {
-//   const blog = await SanityClient.fetch('*[_type == "post"]')
-//   const data = await SanityClient.fetch('*[_type == "projects"]{..., tags[]->}')
+export const getStaticProps:GetStaticProps = async() => {
+  const blog = await SanityClient.fetch('*[_type == "post"]')
+  const data = await SanityClient.fetch('*[_type == "projects"]{..., tags[]->}')
   
-//   return {props: {data, blog}}
-// }
+  return {props: {data, blog}}
+}
