@@ -10,7 +10,9 @@ const { x, y } = useMousePosition();
       ></div>
       
         <CiCompass1 className={"dot"}
-        style={{ left: `${x}px`, top: `${y}px` }}/>
+        style={{ left: `${x}px`, top: `${y}px` }}
+        color={'blue'}
+        />
       
     </>
   );

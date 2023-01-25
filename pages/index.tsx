@@ -8,11 +8,10 @@ import BlogSection from '../components/BlogSection'
 import Tags from '../components/Tags'
 import NewsLetter from '../components/NewsLetter'
 import useMousePosition from '../context/useMousePos'
-import Experience from '../components/Experience'
+import About from '../components/About'
+// import Experience from '../components/Experience'
 
-export default function Home({data, blog}:{data:any[], blog: any[]}) {
-  data = []
-  blog = []
+export default function Home({data, blog}:{data:any[], blog: any[]}) {  
   const {x,y} = useMousePosition()
   return (
     <>
@@ -66,6 +65,7 @@ export default function Home({data, blog}:{data:any[], blog: any[]}) {
 
             <div className="col-md-10">
               <Header /><br /><br />
+              <About /><br /><br /><br />  
               {/* <Experience /> */}
               <ProjectSection data={data} /><br /><br /><br />
               <BlogSection blog={blog} /><br /><br /><br />
@@ -73,7 +73,7 @@ export default function Home({data, blog}:{data:any[], blog: any[]}) {
 
               
               <div className="row">
-                <SectionNumber number={5} title={`Arsenal`} />
+                <SectionNumber number={4} title={`Arsenal`} />
                 <div className="col-md-6"><Tags heading='Skills' tags={["Web Development", "Front-End Development", "Back-End Development", "Web2+Web3","UI design", "Agile Methodologies","Mobile Development","Database management"]} /></div>
                 <div className="col-md-6"><Tags heading='Tools' tags={["JavaScript","ReactJS","NextJS", "Redux+Toolkit","NodeJS","ExpressJS", "MongoDB","PHP","MySQL","SQL","React Native","CSS/SASS","Bootstrap","Chakra UI","VSCode","XAMPP"]} /></div>
               </div><br />
