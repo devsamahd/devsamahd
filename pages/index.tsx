@@ -71,12 +71,11 @@ export default function Home({data, blog}:{data:any[], blog: any[]}) {
               <BlogSection blog={blog} /><br /><br /><br />
 
 
-              
-              <div className="row">
+              {/* <div className="row">
                 <SectionNumber number={4} title={`Arsenal`} />
                 <div className="col-md-6"><Tags heading='Skills' tags={["Web Development", "Front-End Development", "Back-End Development", "Web2+Web3","UI design", "Agile Methodologies","Mobile Development","Database management"]} /></div>
                 <div className="col-md-6"><Tags heading='Tools' tags={["JavaScript","ReactJS","NextJS", "Redux+Toolkit","NodeJS","ExpressJS", "MongoDB","PHP","MySQL","SQL","React Native","CSS/SASS","Bootstrap","Chakra UI","VSCode","XAMPP"]} /></div>
-              </div><br />
+              </div><br /> */}
               
 
               <NewsLetter />

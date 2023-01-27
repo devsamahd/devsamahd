@@ -12,18 +12,10 @@ const BlogSection = ({blog}:{blog:any[]}) => {
     <SectionNumber title='Technical Write-up' number={3} />
     <div className="mt-5 mb-5">
         {blog && (blog.slice(0,5)).map((post:any)=>(
-        <div className="mt-2" key={post.slug.current} style={{"borderBottom":"1px solid"}}>
-            <div className="row g-3">
-                <div className="col-md-2">
-                  <img src={urlFor(post.mainImage).url()} className="img-fluid rounded-start inv" width={"100%"} alt="..." />
-                </div>
-                <div className="col-md-10">
-                  <div className="card-body">
-                      <Link href={`/${post.slug.current}`}><Heading size={"md"}>{post.title}<LinkIcon /></Heading></Link>
-                      <Text noOfLines={2}>{post.intro}</Text>
-                      <div className="card-text">{moment(post._createdAt).format("dddd D MMM YYYY")}</div>
-                  </div>
-                </div>
+        <div className="mt-2" key={post.slug.current} style={{"borderBottom":"1px solid gray"}}>
+            <div className="d-flex" style={{"justifyContent":"space-between"}}>
+                  <Link href={`/${post.slug.current}`}><b>{post.title}</b></Link>
+                  <div className="card-text text-secondary">{moment(post._createdAt).format("ddd, D MMM YYYY.")}</div>
             </div>
         </div>
         )

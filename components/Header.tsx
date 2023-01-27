@@ -17,7 +17,7 @@ import { Blur } from './Experience';
 
  return (
       <>
-      <Box maxWidth={{base: "100%", md:"80%"}} style={{ "marginTop":"150px"}}>
+      <Box maxWidth={{base: "100%", md:"80%"}} style={{ "marginTop":"150px"}} data-aos="fade-in">
         <Stack
           py={{ base: 10, md: 10}}
           >

@@ -7,6 +7,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { urlFor } from '../lib/sanity';
+import Tags from './Tags';
 
 export const SectionNumber = ({ number, title}: { number: number, title: string}) => {
     return(
@@ -46,28 +47,70 @@ const ProjectSection = ({data}:{data:any[]}) => {
         <div>
             {
                 newData && newData.map((project:any, key:number) => (
-                <div key={key} className="pt-5">
-                    <Heading size={"lg"}>{project.name}</Heading>
-                    <Flex 
-                    color='gray.600'
-                    _after={{
-                        content: `"${project.year}"`,
-                        borderBottom: '2px solid',
-                        borderColor: "#1A202C",
-                        flexGrow: 1,
-                        textAlign:"right",
-                        ml: 1,
-                    }}>{project.description}</Flex>
+                <div key={key} className="pt-5 project-section" data-aos="slide-up">
                     
+                    <Box
+                    className='project-content'
+                    style={{
+                        "position": "relative",
+                        "display":"grid",
+                        "gap": "10px",
+                        "gridTemplateColumns": "repeat(12, 1fr)",
+                        "boxAlign": "center",
+                        "alignItems": "center"
+                    }}
+                    >
+                        
                         <Box
-                            w={"100%"}
+                        style={{
+                            "position":"relative",
+                            "gridArea": "1 / 1 / -1 / 7",
+                            "zIndex":2,
+                        }}
+                        >
+                            <Heading 
+                            size={"md"}
+                            pb={"40px"}
+                            color={'gray.700'}
+                            >{project.name}</Heading>
+                            <Box
+                            style={{
+                            "minHeight":"100px",
+                            "background":"#1A202C",
+                            "padding":"20px",
+                            "borderRadius":"10px"
+                            }}
+                            > 
+                                <Flex color='gray.300'>{project.description}</Flex>
+                            </Box>
+                            <Tags tags={project.tags.map((tag:any)=> tag.title)} heading=""/>
+                        </Box>
+
+                        <Box
+                            width={"50vw"}
                             my={5}
                             overflow={'hidden'}
-                            bg={useColorModeValue('gray.100','gray.900')}
                             borderTop={"30px solid"}
                             borderLeft={"30px solid"}
-                            borderColor={useColorModeValue("gray.900","gray.100")
-                        }
+                            style={{
+                                "boxShadow": "0 10px 30px -15px var(--navy-shadow)",
+                                "transition": "var(--transition)",
+                                "gridArea": "1 / 6 / -1 / -1",
+                                "position": "relative",
+                                "zIndex": 1,
+                                "borderRadius":"10px"
+                            }}
+                            _before={{
+                                "content": '""',
+                                "position": "absolute",
+                                "width": "100%",
+                                "height": "100%",
+                                "inset": "0px",
+                                "zIndex": 3,
+                                "transition": "var(--transition)",
+                                "background-color": "gray",
+                                "mix-blend-mode": "screen"
+                            }}
                             >
                             <Img
                                 src={urlFor(project.mainImage).url()}
@@ -76,6 +119,8 @@ const ProjectSection = ({data}:{data:any[]}) => {
                                 alt={'Blog Image'}
                             />
                         </Box>
+                        
+                    </Box>
                 </div>
                 ))
             }

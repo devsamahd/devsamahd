@@ -110,3 +110,54 @@ a {
 .tabss .active{
   background-color: red;
 }
+.project-section:nth-of-type(2n+1) .project-image {
+  grid-column: 1 / 8;
+}
+.project-section{
+      position: relative;
+      display: grid;
+      gap: 10px;
+}
+.project-section:nth-of-type(2n+1) .project-content {
+  grid-column: 5 / -1;
+}
+
+.wrapper{
+  box-shadow: 0 10px 30px -15px navy;
+  display: block;
+  position: relative;
+  width: 100%;
+  border-radius: "10px";
+  background-color: blue;
+  -webkit-border-radius: "10px";
+  -moz-border-radius: "10px";
+  -ms-border-radius: "10px";
+  -o-border-radius: "10px";
+}
+
+.wrapper::before {
+  top: 0px;
+  left: 0px;
+  background-color: navy;
+  mix-blend-mode: screen;
+}
+
+.wrapper::after {
+  border: 2px solid black;
+  top: 20px;
+  left: 20px;
+  z-index: -1;
+}
+
+ .wrapper::before, .wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: "10px";
+  -webkit-border-radius: "10px";
+  -moz-border-radius: "10px";
+  -ms-border-radius: "10px";
+  -o-border-radius: "10px";
+}
