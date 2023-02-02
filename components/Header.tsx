@@ -48,7 +48,7 @@ import { Blur } from './Experience';
             </Heading>
             
             <Text color={'gray.600'} width={{base:'100%', md:'72%'}} letterSpacing={"wide"} fontWeight={"500"} pt={30}>
-              I'm a passionate software developer with a desire for writing clean, effective, efficient and scalable softaware programs.
+              I'm a passionate software developer with a desire for writing clean, effective, efficient and scalable software programs.
               This is my digital garden where I write about what I love and share my knowledge with others.
             </Text>
             <Flex pt={10}>
