@@ -118,8 +118,15 @@ a {
       display: grid;
       gap: 10px;
 }
+.project-section .project-image{
+    grid-area: 1 / 6 / -1 / -1;
+    position: relative;
+    z-index: 1;
+}
+
+
 .project-section:nth-of-type(2n+1) .project-content {
-  grid-column: 5 / -1;
+  grid-column: 7 / -1;
 }
 
 .wrapper{
@@ -149,7 +156,7 @@ a {
   z-index: -1;
 }
 
- .wrapper::before, .wrapper::after {
+ .wrapper::before, .wrapper::after{
   content: "";
   display: block;
   position: absolute;
