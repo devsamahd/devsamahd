@@ -42,7 +42,7 @@ export const SectionNumber = ({ number, title}: { number: number, title: string}
 const ProjectSection = ({data}:{data:any[]}) => {
     const newData = ((data.reverse()).slice(0,3))
   return (
-        <div style={{"marginTop":"40px"}}>
+        <div style={{"marginTop":"40px"}} id="projects">
           <SectionNumber number={2} title={`Some things I've built`} />
         <div>
             {
