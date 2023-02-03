@@ -24,7 +24,7 @@ const NavLink = ({ children, link }: { children: ReactNode, link:string }) => (
 );
 
 export default function Nav() {
-  const navlist = [{name:'About',link:'#about'},{name:'Projects',link:'projects'},{name:'Blog',link:'blog'},{name:'Github',link:'github'}]
+  const navlist = [{name:'About',link:'#about'},{name:'Projects',link:'#projects'},{name:'Blog',link:'blog'},{name:'Github',link:'github'}]
   const navRef = useRef<any>(null)
   useEffect(()=>{
     let prevScrollpos = window.pageYOffset;
@@ -56,7 +56,7 @@ export default function Nav() {
 
   return (
     <>
-      <Box ml={"20vw"} width={"60vw"} bg={"rgba(0,0,0,.20)"} borderRadius={10} px={4} mt={4} position={"fixed"}  transition={"top 0.7s"} visibility={{base:"hidden", md:"visible"}} ref={navRef1}>
+      <Box ml={"20vw"} width={"60vw"} bg={"rgb(88 84 84 / 10%)"} borderRadius={10} px={4} mt={4} position={"fixed"}  transition={"top 0.7s"} visibility={{base:"hidden", md:"visible"}} ref={navRef1}>
         <Flex pr={{ base: 0, md: 10 }} pl={{ base: 0, md: 10 }} h={16} alignItems={'center'} justifyContent={'space-between'}>
         <Box><Link href='/'><img src="me.svg" alt="Samahd" /></Link></Box>
          
