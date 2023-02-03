@@ -24,8 +24,8 @@ import { Blur } from './Experience';
           <Stack flex={1} >
           <Blur
               position={'absolute'}
-              top={10}
-              left={10}
+              top={0}
+              left={0}
               opacity={0.5}
               style={{ filter: 'blur(70px)' }}
             />
