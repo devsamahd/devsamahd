@@ -1,8 +1,5 @@
-import { LinkIcon } from '@chakra-ui/icons'
-import { Heading, Text } from '@chakra-ui/react'
 import moment from 'moment'
 import Link from 'next/link'
-import { urlFor } from '../lib/sanity'
 import { SectionNumber } from './ProjectSection'
 
 

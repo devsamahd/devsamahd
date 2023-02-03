@@ -1,17 +1,17 @@
 import Header from '../components/Header'
 import Meta from '../components/Head'
-import ProjectSection, { SectionNumber } from '../components/ProjectSection'
 import { Box, Container, Stack, Text} from '@chakra-ui/react'
 import { GetStaticProps } from 'next'
 import { SanityClient } from '../lib/sanity'
 import BlogSection from '../components/BlogSection'
-import Tags from '../components/Tags'
 import NewsLetter from '../components/NewsLetter'
 import useMousePosition from '../context/useMousePos'
 import About from '../components/About'
+import ProjectSection from '../components/ProjectSection'
 // import Experience from '../components/Experience'
 
 export default function Home({data, blog}:{data:any[], blog: any[]}) {  
+  
   const {x,y} = useMousePosition()
   return (
     <>
@@ -132,8 +132,17 @@ export default function Home({data, blog}:{data:any[], blog: any[]}) {
 }
 
 export const getStaticProps:GetStaticProps = async() => {
-  const blog = await SanityClient.fetch('*[_type == "post"]')
-  const data = await SanityClient.fetch('*[_type == "projects"]{..., tags[]->}')
-  
+  let data, blog
+  try{
+  blog = await SanityClient.fetch('*[_type == "post"]')
+  data = await SanityClient.fetch('*[_type == "projects"]{..., tags[]->}')
+  }catch(err){
+    console.log(err)
+  }finally{
+    if(!data || !blog){
+      data = []
+      blog= []
+    }
+  }
   return {props: {data, blog}}
 }
