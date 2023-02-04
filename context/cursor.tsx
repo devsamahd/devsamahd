@@ -1,5 +1,4 @@
 import useMousePosition from "./useMousePos";
-import { CiCompass1 } from "react-icons/ci";
 const Cursor = () => {
 const { x, y } = useMousePosition();
   return (
@@ -9,7 +8,7 @@ const { x, y } = useMousePosition();
         style={{ left: `${x}px`, top: `${y}px` }}
       ></div>
       
-        <CiCompass1 className={"dot"}
+        <div className={"dot"}
         style={{ left: `${x}px`, top: `${y}px` }}
         color={'blue'}
         />
