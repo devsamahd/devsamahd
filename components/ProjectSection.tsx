@@ -297,7 +297,7 @@ export const SectionNumber = ({ number, title}: { number: number, title: string}
 const ProjectSection = ({data}:{data:any[]}) => {
 
     const newData = ((data.reverse()).slice(0,3))
-    const secondData = ((data.reverse()).slice(3,10))
+    const secondData = ((data.reverse()).slice(3))
 
     
 return (
@@ -339,12 +339,12 @@ return (
 
                 <div className="project-image">
                   <a href={"/"}>
-                  <Img
+                  {data.mainImage ? <Img
                     src={urlFor(data.mainImage).url()}
                     h="100%"
                     w="100%"
                     alt={'Blog Image'}
-                  />
+                  />: <></>}
                   </a>
                 </div>
               </StyledProject>

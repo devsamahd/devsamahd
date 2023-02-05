@@ -7,6 +7,7 @@ const config = {
     projectId: "wb3euro1",
     dataset: "production",
     apiVersion: "2021-10-21",
+    token:"skes8Q1QkSpy1SA6FcJQg82zc0IGoMY43o4dgAhKCUO3abDvUwog1imO9WT4xGMFTjr73ZSZvfi1xXO7h9ot09XhAkshrnNpuXBlIJFljuuyLIxExYWvxsqv52VLbwu0PeDDkyBIUQfyOMBBqjTe7WNbil3opnlCooJa6eLJrPjUpf1zlFAv",
     useCdn: false
 }
 export const SanityClient = createClient(config)

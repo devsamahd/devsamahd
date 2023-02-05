@@ -178,8 +178,8 @@ export const ProjectInner = ({project}:{project:any}) => {
 
         <footer>
             <ul className="project-tech-list">
-              {project.tags.map((tag:any, i:any) => (
-                <li key={i}>{tag.title}</li>
+              {project?.tags?.map((tag:any, i:any) => (
+                <li key={i}>{tag?.title}</li>
               ))}
             </ul>
         </footer>
