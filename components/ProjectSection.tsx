@@ -1,16 +1,12 @@
 import {
-  Box,
-  Heading,
   Img,
   Flex,
-  useColorModeValue,
   Text,
 } from '@chakra-ui/react';
-import { urlFor } from '../lib/sanity';
-import Tags from './Tags';
+import { urlFor } from '../lib/sanity'
 import styled from 'styled-components'
-import { CiGift } from 'react-icons/ci';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
+import Projects from './MoreProject';
 interface GridProps {
     readonly children: any;
     readonly theme: any;
@@ -109,13 +105,13 @@ const StyledProject = styled.li`
   }
   .project-overline {
     margin: 10px 0;
-    color: black;
+    color: #4299e1;
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
     font-weight: 500;
   }
   .project-title {
-    color: var(--lightest-slate);
+    color: #1a300f;
     font-size: clamp(24px, 5vw, 28px);
     @media (min-width: 768px) {
       margin: 0 0 20px;
@@ -299,12 +295,14 @@ export const SectionNumber = ({ number, title}: { number: number, title: string}
 
 
 const ProjectSection = ({data}:{data:any[]}) => {
-    const newData = ((data.reverse()).slice(0,3))
-    console.log(newData)
-return (
-    <section>
-        <SectionNumber number={2} title={`Some things I've built`} />
 
+    const newData = ((data.reverse()).slice(0,3))
+    const secondData = ((data.reverse()).slice(3,10))
+
+    
+return (
+    <section><br /><br /><br /><br />
+        <SectionNumber number={2} title={`Some things I've built`} /><br /><br />
     <StyledProjectsGrid>
         {newData && newData.map(( data, i) => (
             <StyledProject key={i} ref={el => (data[i] = el)}>
@@ -322,16 +320,16 @@ return (
 
                     {
                       <ul className="project-tech-list">
-                        {data.tags.map((tech:any, i:any) => (
-                          <li key={i}>{tech.title}</li>
+                        {data?.tags?.map((tag:any, i:any) => (
+                          <li key={i}>{tag?.title}</li>
                         ))}
                       </ul>
                     }
 
                     <div className="project-links">
-                        <a href={"/"} aria-label="Course Link" className="cta">
+                        {data.github !== "un" && <a href={data.github} aria-label="Course Link" className="cta">
                           Code
-                        </a>
+                        </a>}
                         <a href={"/"} aria-label="External Link" className="external">
                           <ExternalLinkIcon />
                         </a>
@@ -352,7 +350,8 @@ return (
               </StyledProject>
             
           ))}
-      </StyledProjectsGrid>
+      </StyledProjectsGrid><br /><br /><br /><br /><br /><br />
+      <Projects projects={secondData} />
     </section>
 
 )
