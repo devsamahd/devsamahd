@@ -1,9 +1,9 @@
 import { css } from 'styled-components';
 
 const button = css`
-  color: var(--green);
+  color: #4299e1;
   background-color: transparent;
-  border: 1px solid var(--green);
+  border: 1px solid #4299e1;
   border-radius: var(--border-radius);
   font-size: var(--fz-xs);
   font-family: var(--font-mono);
@@ -87,9 +87,9 @@ const mixins = {
   button,
 
   smallButton: css`
-    color: var(--green);
+    color: #4299e1;
     background-color: transparent;
-    border: 1px solid var(--green);
+    border: 1px solid #4299e1;
     border-radius: var(--border-radius);
     padding: 0.75rem 1rem;
     font-size: var(--fz-xs);
