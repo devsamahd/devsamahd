@@ -264,7 +264,7 @@ const StyledProject = styled.li`
   }
 `;
 
-export const SectionNumber = ({ number, title}: { number: number, title: string}) => {
+export const SectionNumber = ({ number, title}:{ number: number, title: string}) => {
     return(
         <Flex
           align={'center'}
@@ -296,8 +296,8 @@ export const SectionNumber = ({ number, title}: { number: number, title: string}
 
 const ProjectSection = ({data}:{data:any[]}) => {
 
-    const newData = ((data.reverse()).slice(0,3))
-    const secondData = ((data.reverse()).slice(3))
+    const newData = (data).slice(0,3)
+    const secondData = data.slice(3,10)
 
     
 return (
