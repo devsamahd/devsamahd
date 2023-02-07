@@ -1,6 +1,6 @@
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { Link, TagRightIcon } from '@chakra-ui/react';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 
 const StyledProjectsSection = styled.section`
@@ -146,12 +146,12 @@ export const ProjectInner = ({project}:{project:any}) => {
         <header>
           <div className="project-top">
             <div className="folder">
-              <TagRightIcon />
+              <img src="default.svg" alt="" />
             </div>
             <div className="project-links">
               
                 <a href={"/"} aria-label="GitHub Link" target="_blank" rel="noreferrer">
-                  <ExternalLinkIcon />
+                  <img src="github.png" alt="" />
                 </a>
               
              
