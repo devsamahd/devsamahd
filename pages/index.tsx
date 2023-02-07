@@ -135,14 +135,14 @@ export const getStaticProps:GetStaticProps = async() => {
   let data, blog
   try{
   blog = await SanityClient.fetch('*[_type == "post"]')
-  data = await SanityClient.fetch('*[_type == "projects"]{..., tags[]->}')
+  data = await SanityClient.fetch('*[_type == "projects"]{..., tags[]->}|order(_updatedAt)')
   }catch(err){
     console.log(err)
   }finally{
     if(!data || !blog){
       data = []
       blog= []
-    }
+    } 
   }
   return {props: {data, blog}}
 }
