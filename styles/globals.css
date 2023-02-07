@@ -110,13 +110,14 @@ a {
   left: 50%;
   width: 20px;
   height: 20px;
-  background-color: white;
+  background-color: transparent;
   padding: 2px;
   border-radius: 100%;
   transform: translate(-50%, -50%);
   z-index: 999;
   pointer-events: none;
   animation-name: rot;
+  animation-delay: 10s;
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
