@@ -155,14 +155,14 @@ export const ProjectInner = ({project}:{project:any}) => {
                 </a>
               
              
-                <a
+                {project.address !== 'un' ? <a
                   href={""}
                   aria-label="External Link"
                   className="external"
                   target="_blank"
                   rel="noreferrer">
                   <ExternalLinkIcon />
-                </a>
+                </a>: <></>}
              
             </div>
           </div>
