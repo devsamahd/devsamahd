@@ -311,7 +311,7 @@ return (
                     <p className="project-overline">Featured Project</p>
 
                     <h3 className="project-title">
-                      <a href={"/"}>{data.name}</a>
+                      <a href={data.address !== "un" ? data.address : data.github !== "un" ? data.github : "/"}>{data.name}</a>
                     </h3>
 
                     <div
@@ -330,7 +330,7 @@ return (
                         {data.github !== "un" && <a href={data.github} aria-label="Course Link" className="cta">
                           Code
                         </a>}
-                        <a href={"/"} aria-label="External Link" className="external">
+                        <a href={data.address !== "un" ? data.address : data.github !== "un" ? data.github : "/"} aria-label="External Link" className="external">
                           <ExternalLinkIcon />
                         </a>
                     </div>
@@ -338,7 +338,7 @@ return (
                 </div>
 
                 <div className="project-image">
-                  <a href={"/"}>
+                  <a href={data.address !== "un" ? data.address : data.github !== "un" ? data.github : "/"}>
                   {data.mainImage ? <Img
                     src={urlFor(data.mainImage).url()}
                     h="100%"

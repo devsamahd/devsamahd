@@ -150,7 +150,7 @@ export const ProjectInner = ({project}:{project:any}) => {
             </div>
             <div className="project-links">
               
-                <a href={"/"} aria-label="GitHub Link" target="_blank" rel="noreferrer">
+                <a href={project.address !== "un" ? project.address : project.github !== "un" ? project.github : "/"} aria-label="GitHub Link" target="_blank" rel="noreferrer">
                   <img src="github.png" alt="" />
                 </a>
               
@@ -168,7 +168,7 @@ export const ProjectInner = ({project}:{project:any}) => {
           </div>
 
           <h3 className="project-title">
-            <a href={"/"} target="_blank" rel="noreferrer">
+            <a href={project.address !== "un" ? project.address : project.github !== "un" ? project.github : "/"} target="_blank" rel="noreferrer">
               {project.name}
             </a>
           </h3>
