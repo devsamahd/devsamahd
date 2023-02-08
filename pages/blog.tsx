@@ -8,17 +8,17 @@ import { SectionNumber } from '../components/ProjectSection'
 import { SanityClient } from '../lib/sanity'
 
 const Blog = ({blogs}: {blogs: any}) => { 
-  const art23 = blogs.filter((blo:any)=> moment(blo._createdAt).format("YYYY") == "2023")
+  const art23 = blogs.filter((blo:any) => moment(blo._createdAt).format("YYYY") === "2023")
   return (
     <>
-    <Meta title="Writing | DevSamahd" />
+    <Meta title="Technicals | DevSamahd" />
     <div className="row">
     <div className="col-md-2"></div>
     <div className='col-md-8'>
-      <br />
+      <br /><br /><br /><br /><br />
     <SectionNumber title='Writing' number={1} />
 
-    <Heading size={"lg"} mt={10}>2022</Heading>
+    <Heading size={"lg"} mt={10}>2023</Heading>
     <Box mt={3}>
     {
       art23 && ((art23.reverse()).map((blog:any) => (
@@ -30,6 +30,8 @@ const Blog = ({blogs}: {blogs: any}) => {
       )))
     }
     </Box>
+    <Heading size={"lg"} mt={10}>2022</Heading>
+
     <Box mt={3}>
     {
       blogs && ((blogs.filter((blo:any) => (moment(blo._createdAt).format("YYYY") == "2022")))).map((blog:any) => (
