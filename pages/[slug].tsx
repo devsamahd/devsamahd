@@ -1,18 +1,24 @@
-import { Heading, Stack, Text, useColorModeValue } from "@chakra-ui/react"
+import { Heading, Stack, Text } from "@chakra-ui/react"
 import { PortableText } from "@portabletext/react"
 import Meta from "../components/Head"
 import { SanityClient } from "../lib/sanity"
 import {urlFor} from '../lib/sanity'
 import Refractor from 'react-refractor'
 import js from 'refractor/lang/javascript'
+import jsx from 'refractor/lang/jsx'
+import bash from 'refractor/lang/bash'
+import powershell from 'refractor/lang/powershell'
 import moment from "moment"
+import Tags from "../components/Tags"
 
 Refractor.registerLanguage(js)  
+Refractor.registerLanguage(jsx)  
+Refractor.registerLanguage(bash)  
+Refractor.registerLanguage(powershell)  
 
 const CodeComponent = ({value:{language, code, highlightedLines}}: {value:{language?:any,code?:any,highlightedLines?:any}})=> {
   return (
     <Refractor
-      // In this example, `props` is the value of a `code` fi
       language={language}
       value={code}
       markers={highlightedLines}
@@ -36,22 +42,44 @@ const components:any = {
     image: SampleImageComponent,
     code: CodeComponent
   },
+  marks:{
+    link: ({value, children}:{value:any, children:any}) => {
+      return (
+        <a href={value?.href} target={"_blank"} style={{'color':'blue', fontWeight:"600"}}>
+          {children}
+        </a>
+      )
+    }
+  }
 }
-const postQuery = '*[_type == "post" && slug.current == $slug][0]'
+const postQuery = '*[_type == "post" && slug.current == $slug][0]{..., categories[]->}'
 
-const course = ({post}:{post:any}) => {
+const course = ({post}:{post:any}) => { 
   return (
     <div className='row'>
       
-      <Meta title={post.title} desc={post.description} />
+      <Meta title={post.title} desc={post.description} image={urlFor(post.mainImage).url()} type="Article" />
       <div className="col-md-2"></div>
       <div className="col-md-8 pt-5 container" >
-        
-            <Heading size={'lg'}>{post.title}</Heading>
-            <Text>{post.intro}</Text><br />
-            <Text>-{moment(post._createdAt).format("dddd, D MMM YYYY")}</Text>
-            <hr />
+            <br /><br /><br /><br />
+            <div className="row">
+              <div className="col-md-2">
+                <img src={urlFor(post.mainImage).url()} alt=""/>
+              </div>
+              <div className="col-md-10">
+                <Heading size={'lg'}>{post.title}</Heading>
+                <br />
+                <div className="d-flex justify-content-between">
+                  <Tags heading="" tags={post.categories.map((tag:any) => tag.title)} />
+
+                  <Text>-{moment(post._createdAt).format("dddd, D MMM YYYY")}</Text>
+                </div>
+              </div>
+            </div>
+            
+            
             <br />
+            <hr />
             <br />
           <Stack mt={5}>
           <PortableText value={post.body} components={components}/>
