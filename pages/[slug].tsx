@@ -1,4 +1,4 @@
-import { Heading, Stack, Text } from "@chakra-ui/react"
+import { Center, Heading, Stack, Text } from "@chakra-ui/react"
 import { PortableText } from "@portabletext/react"
 import Meta from "../components/Head"
 import { SanityClient } from "../lib/sanity"
@@ -64,7 +64,7 @@ const course = ({post}:{post:any}) => {
             <br /><br /><br /><br />
             <div className="row">
               <div className="col-md-2">
-                <img src={urlFor(post.mainImage).url()} alt=""/>
+                <Center><img src={urlFor(post.mainImage).url()} alt=""/></Center><br /><br />
               </div>
               <div className="col-md-10">
                 <Heading size={'lg'}>{post.title}</Heading>
@@ -84,7 +84,7 @@ const course = ({post}:{post:any}) => {
           <Stack mt={5}>
           <PortableText value={post.body} components={components}/>
           </Stack>
-        
+
         </div>
       <div className="col-md-2"></div>
         

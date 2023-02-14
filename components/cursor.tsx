@@ -3,7 +3,7 @@ import useMousePosition from "../context/useMousePos";
 const Cursor = () => {
 const { x, y } = useMousePosition();
   return (
-    <Box display={{md:"inline", base:"none"}}>
+    <Box display={{sm:"inline", base:"none"}}>
         <div className={"dot"}
         style={{ left: `${x}px`, top: `${y}px` }}
         color={'blue'}
