@@ -177,7 +177,7 @@ const StyledProject = styled.li`
       margin: 10px 0;
       li {
         margin: 0 10px 5px 0;
-        color: var(--lightest-slate);
+        color: black;
       }
     }
   }

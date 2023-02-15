@@ -24,7 +24,7 @@ const About = () => {
           </div>
           <div className="col-md-1"></div>
 
-          <div className="col-md-5">
+          <div className="col-md-5"><br />
             <Box
               width={"50%"}
               className="wrapper"
