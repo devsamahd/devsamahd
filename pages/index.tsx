@@ -65,10 +65,10 @@ export default function Home({data, blog}:{data:any[], blog: any[]}) {
 
             <div className="col-md-10">
               <Header /><br /><br />
-              <About /><br /><br /><br />  
+              <About /><br /><br /><br /> 
               {/* <Experience /> */}
               <ProjectSection data={data} /><br /><br /><br />
-              <BlogSection blog={blog} /><br /><br /><br />
+              {/* <BlogSection blog={blog} /><br /><br /><br /> */}
 
 
               {/* <div className="row">

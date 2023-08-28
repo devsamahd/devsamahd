@@ -24,7 +24,7 @@ const NavLink = ({ children, link }: { children: ReactNode, link:string }) => (
 );
 
 export default function Nav() {
-  const navlist = [{name:'About',link:'#about'},{name:'Projects',link:'#projects'},{name:'Blog',link:'blog'},{name:'Github',link:'github'}]
+  const navlist = [{name:'About',link:'#about'},{name:'Projects',link:'#projects'},{name:'Blog',link:'#newsletter'},{name:'Github',link:'github'}]
   const navRef = useRef<any>(null)
   useEffect(()=>{
     let prevScrollpos = window.pageYOffset;
