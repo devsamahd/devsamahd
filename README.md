@@ -8,6 +8,7 @@
 - TypeScript / JavaScript
 - Go
 - PHP
+- Swift
 
 ### Backend Frameworks:
 - Node.js (Express)
@@ -16,9 +17,12 @@
 ### Frontend Frameworks:
 - React.js
 - Next.js
+- ChakraUI
+- Gatsby.js
 
 ### Mobile:
 - React Native
+- SwiftUI
 
 ### Databases / Cache:
 - MySQL
@@ -31,12 +35,10 @@
 - Ubuntu
 - Docker
 - Virtual Machine (AWS EC2)
+- Cloud hosting (AWS, Digital Ocean)
 
 ### Microservices & Message Brokers:
-- Kafka
 - RabbitMQ
-- ZooKeeper
-- Nginx API Gateway
 
 ## Let's Connect!
 
