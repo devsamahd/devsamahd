@@ -33,12 +33,17 @@
 - Nginx
 - Apache
 - Ubuntu
-- Docker
+- Docker and Kubernetes
 - Virtual Machine (AWS EC2)
 - Cloud hosting (AWS, Digital Ocean)
 
 ### Microservices & Message Brokers:
 - RabbitMQ
+- Apache Kafka
+- Zookeeper
+
+### Monitoring:
+- Prometheus
 
 ## Let's Connect!
 
