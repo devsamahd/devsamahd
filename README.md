@@ -21,7 +21,6 @@
 - Gatsby.js
 
 ### Mobile:
-- React Native
 - SwiftUI
 
 ### Databases / Cache:
