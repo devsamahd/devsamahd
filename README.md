@@ -11,8 +11,9 @@
 - Swift
 
 ### Backend Frameworks:
-- Node.js (Express)
+- Node.js (Express and Nest)
 - PHP (Laravel)
+- Go (Gin and Mux)
 
 ### Frontend Frameworks:
 - React.js
@@ -25,15 +26,15 @@
 
 ### Databases / Cache:
 - MySQL
+- Postgres
 - MongoDB
 - Redis
 
 ### Server-Side / Deployment:
-- Nginx
 - Apache
 - Ubuntu
 - Docker and Kubernetes
-- Virtual Machine (AWS EC2)
+- Virtual Machine (AWS EC2, Digital Ocean Droplets)
 - Cloud hosting (AWS, Digital Ocean)
 
 ### Microservices & Message Brokers:
