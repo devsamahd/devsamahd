@@ -1,50 +1,57 @@
-# Fullstack Software Engineer | Backend Lover
+# 👨‍💻 Fullstack Software Engineer — Backend Aficionado
 
-🚀 Welcome to my GitHub profile! I'm passionate about building robust and scalable backend systems, and I also enjoy exploring various technologies across the stack. Here's a glimpse of what I work with:
+Hey there! I'm a passionate **Fullstack Developer** with a backend-first mindset. I love building fast, scalable, and efficient systems. From writing low-latency APIs to deploying containerized services — I do it all (and enjoy every second of it).
 
-## Technologies I Work With:
+---
 
-### Languages:
-- TypeScript / JavaScript
-- Go
-- PHP
-- Swift
+## ⚙️ Tech Stack I Work With
 
-### Backend Frameworks:
-- Node.js (Express and Nest)
-- PHP (Laravel)
-- Go (Gin and Mux)
+### 🧠 Languages
+- **TypeScript / JavaScript**
+- **Go**
+- **PHP**
+- **Swift**
 
-### Frontend Frameworks:
-- React.js
-- Next.js
-- ChakraUI
-- Gatsby.js
+### 🔧 Backend Frameworks
+- **Node.js** (Express, NestJS)
+- **Go** (Gin, Mux)
+- **PHP** (Laravel)
 
-### Mobile:
-- SwiftUI
+### 🖥️ Frontend & UI
+- **React.js**
+- **Next.js**
+- **Chakra UI**
+- **Gatsby.js**
 
-### Databases / Cache:
-- MySQL
-- Postgres
-- MongoDB
-- Redis
+### 📱 Mobile
+- **SwiftUI**
 
-### Server-Side / Deployment:
-- Apache
-- Ubuntu
-- Docker and Kubernetes
-- Virtual Machine (AWS EC2, Digital Ocean Droplets)
-- Cloud hosting (AWS, Digital Ocean)
+### 🗄️ Databases & Caching
+- **PostgreSQL**
+- **MySQL**
+- **MongoDB**
+- **Redis**
 
-### Microservices & Message Brokers:
-- RabbitMQ
-- Apache Kafka
-- Zookeeper
+### ☁️ DevOps & Infra
+- **Docker & Kubernetes**
+- **Linux (Ubuntu)**
+- **Apache / Nginx**
+- **AWS EC2 / DigitalOcean Droplets**
 
-### Monitoring:
-- Prometheus
+### 🧩 Microservices & Messaging
+- **RabbitMQ**
+- **Apache Kafka**
+- **Zookeeper**
 
-## Let's Connect!
+### 📈 Monitoring & Observability
+- **Prometheus**
 
-📫 Feel free to reach out if you have any questions, suggestions, or just want to chat about technology and software development. Happy coding!
+---
+
+## 🤝 Let's Connect!
+
+Got a cool project idea or just want to geek out about system architecture or backend scaling?
+
+**📫 Reach me via GitHub or drop me a DM anywhere I roam online.**
+
+> "Build fast. Break nothing. Scale smart. Stay curious." 🚀
