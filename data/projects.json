@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "title": "Decentralized Escrow API",
+    "description": "A robust Web3 backend service built with Go and PostgreSQL that facilitates trustless transactions. Integrates directly with Ethereum smart contracts to hold and release funds based on multi-sig approvals.",
+    "techStack": ["Go", "Solidity", "PostgreSQL", "Docker", "Ethers.js"],
+    "githubUrl": "https://github.com/yourgithub/repo",
+    "liveUrl": "https://your-api-docs.com"
+  },
+  {
+    "id": "2",
+    "title": "AI-Powered RAG Microservice",
+    "description": "An asynchronous Node.js microservice utilizing RabbitMQ and OpenAI's API. It ingests thousands of PDF documents, chunks them, stores embeddings in a vector database, and serves highly accurate context-aware responses.",
+    "techStack": ["Node.js", "Express", "RabbitMQ", "OpenAI", "Redis"],
+    "githubUrl": "https://github.com/yourgithub/repo",
+    "liveUrl": ""
+  },
+  {
+    "id": "3",
+    "title": "High-Frequency Trading Websocket",
+    "description": "A low-latency real-time data streaming pipeline built in Rust and Next.js. Capable of handling 10k+ concurrent connections streaming live crypto market data with less than 50ms latency.",
+    "techStack": ["TypeScript", "Next.js", "WebSockets", "Kafka"],
+    "githubUrl": "https://github.com/yourgithub/repo",
+    "liveUrl": "https://live-demo.com"
+  }
+]
