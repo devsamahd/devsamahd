@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const techCategories = [
   {
     title: "Backend & Systems",
-    skills: ["Go", "Node.js", "PostgreSQL", "Kafka", "Redis", "Docker", "Kubernetes"],
+    skills: ["Go", "Node.js", "PostgreSQL", "MySQL", "MongoDB", "Kafka", "Redis", "Docker", "Kubernetes"],
   },
   {
     title: "Web3 & AI",
@@ -13,7 +13,7 @@ const techCategories = [
   },
   {
     title: "Frontend & Mobile",
-    skills: ["TypeScript", "Next.js", "React", "TailwindCSS", "Framer Motion", "SwiftUI"],
+    skills: ["TypeScript", "Next.js", "React", "TailwindCSS", "Framer Motion", "SwiftUI","ChakraUI","Figma"],
   }
 ];
 

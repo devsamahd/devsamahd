@@ -7,24 +7,38 @@ import { Briefcase } from "lucide-react";
 const experiences = [
   {
     id: 1,
-    role: "Senior Backend Engineer",
-    company: "Web3 Startup",
-    date: "2024 - Present",
-    desc: "Architected high-throughput microservices in Go. Integrated smart contracts with the backend infrastructure handling $5M+ in daily volume.",
+    role: "Freelance Software Engineer",
+    company: "Independent",
+    date: "Jan 2024 - Present",
+    desc: "Delivered scalable full-stack freelance projects while completing university studies. Currently actively seeking full-time roles, bringing a strong passion for solving complex technical challenges.",
   },
   {
     id: 2,
-    role: "Fullstack Developer",
-    company: "AI Solutions Inc",
-    date: "2022 - 2024",
-    desc: "Built RAG pipelines connecting OpenAI's LLMs with enterprise vector databases. Reduced query latency by 40% through Redis caching.",
+    role: "Software Engineer",
+    company: "Haske Groups, Lagos",
+    date: "Nov 2022 - Jan 2024",
+    desc: "Spearheaded end-to-end development of scalable solutions, including an integrated estate security and administration system. Optimized user interfaces to drive marketing activities and elevate user engagement.",
   },
   {
     id: 3,
-    role: "Software Engineer",
-    company: "Tech Agency",
-    date: "2020 - 2022",
-    desc: "Developed and maintained RESTful APIs using Node.js and Express. Migrated legacy PHP codebases to modern TypeScript architectures.",
+    role: "Backend Engineer (Contract)",
+    company: "Dreamax Ltd, Tel Aviv",
+    date: "Apr 2023 - Sep 2023",
+    desc: "Architected a highly scalable marketing system and a complex multi-step form builder. Engineered robust solutions utilizing Next.js, Express.js, PHP, and MySQL with Knex and Objection.js.",
+  },
+  {
+    id: 4,
+    role: "Backend Engineer",
+    company: "Frixx App (Now Zendmart), Lagos",
+    date: "Jan 2023 - Apr 2023",
+    desc: "Built a robust backend API for a developer-focused social network. Engineered resilient platform infrastructure from the ground up using TypeScript, Node.js, Express, and MongoDB.",
+  },
+  {
+    id: 5,
+    role: "Software Developer",
+    company: "Education Online Nigeria, Ilorin",
+    date: "May 2020 - Nov 2021",
+    desc: "Developed essential components for an ambitious e-learning platform, including an online library and a dynamic grant/scholarship system designed to democratize access to education.",
   }
 ];
 

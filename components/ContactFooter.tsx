@@ -78,7 +78,7 @@ export const ContactFooter = () => {
         className="mt-32 w-full flex flex-col items-center gap-4 text-zinc-500 text-sm font-mono"
       >
         <div className="flex items-center gap-4">
-          <a href="https://github.com/yourgithub" className="hover:text-emerald-400 transition-colors flex items-center gap-1">GitHub <ArrowUpRight size={14} /></a>
+          <a href="https://github.com/devsamahd" className="hover:text-emerald-400 transition-colors flex items-center gap-1">GitHub <ArrowUpRight size={14} /></a>
           <a href="https://linkedin.com/in/yourlinkedin" className="hover:text-emerald-400 transition-colors flex items-center gap-1">LinkedIn <ArrowUpRight size={14} /></a>
         </div>
         

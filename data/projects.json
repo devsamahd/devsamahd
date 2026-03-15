@@ -1,10 +1,10 @@
 [
   {
     "id": "1",
-    "title": "Decentralized Escrow API",
-    "description": "A robust Web3 backend service built with Go and PostgreSQL that facilitates trustless transactions. Integrates directly with Ethereum smart contracts to hold and release funds based on multi-sig approvals.",
-    "techStack": ["Go", "Solidity", "PostgreSQL", "Docker", "Ethers.js"],
-    "githubUrl": "https://github.com/yourgithub/repo",
+    "title": "Tonzscrow: Decentralized Escrow API",
+    "description": "A robust Web3 backend service built with Go and PostgreSQL that facilitates trustless transactions. Integrates directly with Ton smart contracts to hold and release funds based on multi-sig approvals.",
+    "techStack": ["Go", "Tact", "PostgreSQL"],
+    "githubUrl": "https://github.com/devsamahd/repo",
     "liveUrl": "https://your-api-docs.com"
   },
   {
@@ -20,6 +20,54 @@
     "title": "High-Frequency Trading Websocket",
     "description": "A low-latency real-time data streaming pipeline built in Rust and Next.js. Capable of handling 10k+ concurrent connections streaming live crypto market data with less than 50ms latency.",
     "techStack": ["TypeScript", "Next.js", "WebSockets", "Kafka"],
+    "githubUrl": "https://github.com/yourgithub/repo",
+    "liveUrl": "https://live-demo.com"
+  },
+  {
+    "id": "4",
+    "title": "Tonzilla",
+    "description": "A Telegram mini app for private file sharing, allowing users to securely upload, encrypt, and share files directly within the Telegram interface.",
+    "techStack": ["Next.js", "TypeScript", "Telegram Mini Apps API", "TON", "Tailwind CSS"],
+    "githubUrl": "https://github.com/yourgithub/repo",
+    "liveUrl": "https://live-demo.com"
+  },
+  {
+    "id": "5",
+    "title": "Netra.ng",
+    "description": "A comprehensive ISP management dashboard and captive portal system. It handles user authentication, billing, and bandwidth allocation by interfacing directly with a cloud-hosted TP-Link Omada SDN controller, seamlessly managing network traffic across ER605 routers and EAP 650 access points.",
+    "techStack": ["Next.js", "Node.js", "Omada SDN API", "PostgreSQL", "PM2"],
+    "githubUrl": "https://github.com/yourgithub/repo",
+    "liveUrl": "https://live-demo.com"
+  },
+  {
+    "id": "6",
+    "title": "Allwebtool",
+    "description": "A centralized directory and aggregator for multiple useful AI tools from around the web, offering a single streamlined interface for users to discover and interact with various AI models.",
+    "techStack": ["Next.js", "TypeScript", "OpenAI API", "Tailwind CSS", "Prisma"],
+    "githubUrl": "https://github.com/yourgithub/repo",
+    "liveUrl": "https://live-demo.com"
+  },
+  {
+    "id": "7",
+    "title": "Morm",
+    "description": "Morm is a powerful Object Document Mapper (ODM) for Golang, inspired by Mongoose, designed to be developer-friendly and feature-rich for seamless MongoDB integration.",
+    "techStack": ["Go", "MongoDB Go Driver", "Reflection API"],
+    "githubUrl": "https://github.com/yourgithub/repo",
+    "liveUrl": "https://live-demo.com"
+  },
+  {
+    "id": "8",
+    "title": "Dehub.io",
+    "description": "A Web3 video streaming platform that leverages decentralized storage and blockchain technology to give creators censorship-resistant content distribution and direct monetization.",
+    "techStack": ["Next.js", "TypeScript", "IPFS", "Livepeer", "Ethers.js"],
+    "githubUrl": "https://github.com/yourgithub/repo",
+    "liveUrl": "https://live-demo.com"
+  },
+  {
+    "id": "9",
+    "title": "Sociallio",
+    "description": "An advanced marketing automation system that allows users to schedule posts, track analytics, and manage multiple social media accounts from a single unified dashboard.",
+    "techStack": ["Next.js", "Node.js", "PostgreSQL", "Redis", "BullMQ"],
     "githubUrl": "https://github.com/yourgithub/repo",
     "liveUrl": "https://live-demo.com"
   }
