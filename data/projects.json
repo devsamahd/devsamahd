@@ -1,74 +1,82 @@
 [
   {
-    "id": "1",
-    "title": "Tonzscrow: Decentralized Escrow API",
-    "description": "A robust Web3 backend service built with Go and PostgreSQL that facilitates trustless transactions. Integrates directly with Ton smart contracts to hold and release funds based on multi-sig approvals.",
-    "techStack": ["Go", "Tact", "PostgreSQL"],
-    "githubUrl": "https://github.com/devsamahd/repo",
-    "liveUrl": "https://your-api-docs.com"
+    "id": "zentramesh",
+    "title": "Zentramesh: Network & ISP Infrastructure Engine",
+    "description": "Core networking engine powering Netra.ng and Superkonnect. Interfaces with cloud-hosted TP-Link Omada SDN controllers (ER605 routers & EAP 650 APs) to automate user authentication, billing, and bandwidth shaping—serving hundreds of active users and managing millions of NGN in revenue.",
+    "techStack": ["Go", "Node.js", "Next.js", "Omada SDN API", "PostgreSQL", "Redis", "Docker"],
+    "githubUrl": "https://github.com/devsamahd/zentramesh",
+    "liveUrl": "https://netra.ng"
   },
   {
-    "id": "2",
+    "id": "superkonnect",
+    "title": "Superkonnect: Network Access & Billing Platform",
+    "description": "Powered by Zentramesh, Superkonnect provides seamless captive portal authentication, dynamic voucher generation, and real-time subscription management for high-density internet access networks.",
+    "techStack": ["Next.js", "Node.js", "Zentramesh Engine", "PostgreSQL", "Tailwind CSS"],
+    "githubUrl": "https://github.com/devsamahd/superkonnect",
+    "liveUrl": "https://superkonnect.com"
+  },
+  {
+    "id": "tonzscrow",
+    "title": "Tonzscrow: Decentralized Escrow API",
+    "description": "A robust Web3 backend microservice built with Go and PostgreSQL that facilitates trustless escrow transactions. Integrates directly with TON smart contracts to hold and release funds based on multi-sig approval workflows.",
+    "techStack": ["Go", "Tact", "PostgreSQL", "TON Blockchain", "Docker"],
+    "githubUrl": "https://github.com/devsamahd/tonzscrow",
+    "liveUrl": "https://tonzscrow.docs.api"
+  },
+  {
+    "id": "rag-microservice",
     "title": "AI-Powered RAG Microservice",
-    "description": "An asynchronous Node.js microservice utilizing RabbitMQ and OpenAI's API. It ingests thousands of PDF documents, chunks them, stores embeddings in a vector database, and serves highly accurate context-aware responses.",
-    "techStack": ["Node.js", "Express", "RabbitMQ", "OpenAI", "Redis"],
-    "githubUrl": "https://github.com/yourgithub/repo",
+    "description": "An asynchronous Node.js microservice utilizing RabbitMQ and OpenAI API. Ingests thousands of PDF documents, generates vector embeddings, stores them in vector databases, and serves context-aware RAG queries with sub-second response times.",
+    "techStack": ["Node.js", "Express", "RabbitMQ", "OpenAI API", "Redis", "Vector DB"],
+    "githubUrl": "https://github.com/devsamahd/rag-microservice",
     "liveUrl": ""
   },
   {
-    "id": "3",
-    "title": "High-Frequency Trading Websocket",
-    "description": "A low-latency real-time data streaming pipeline built in Rust and Next.js. Capable of handling 10k+ concurrent connections streaming live crypto market data with less than 50ms latency.",
-    "techStack": ["TypeScript", "Next.js", "WebSockets", "Kafka"],
-    "githubUrl": "https://github.com/yourgithub/repo",
-    "liveUrl": "https://live-demo.com"
+    "id": "hft-websocket",
+    "title": "High-Frequency Trading Websocket Engine",
+    "description": "A low-latency real-time market data streaming pipeline built in Rust and Next.js, capable of serving 10,000+ concurrent WebSocket connections with sub-50ms latency.",
+    "techStack": ["Rust", "TypeScript", "Next.js", "WebSockets", "Kafka"],
+    "githubUrl": "https://github.com/devsamahd/hft-websocket",
+    "liveUrl": ""
   },
   {
-    "id": "4",
-    "title": "Tonzilla",
-    "description": "A Telegram mini app for private file sharing, allowing users to securely upload, encrypt, and share files directly within the Telegram interface.",
+    "id": "tonzilla",
+    "title": "Tonzilla: Encrypted Telegram Mini App",
+    "description": "A Telegram mini app for private file sharing, allowing users to securely upload, encrypt, and share files directly within Telegram using TON decentralized storage.",
     "techStack": ["Next.js", "TypeScript", "Telegram Mini Apps API", "TON", "Tailwind CSS"],
-    "githubUrl": "https://github.com/yourgithub/repo",
-    "liveUrl": "https://live-demo.com"
+    "githubUrl": "https://github.com/devsamahd/tonzilla",
+    "liveUrl": "https://t.me/tonzilla_bot"
   },
   {
-    "id": "5",
-    "title": "Netra.ng",
-    "description": "A comprehensive ISP management dashboard and captive portal system. It handles user authentication, billing, and bandwidth allocation by interfacing directly with a cloud-hosted TP-Link Omada SDN controller, seamlessly managing network traffic across ER605 routers and EAP 650 access points.",
-    "techStack": ["Next.js", "Node.js", "Omada SDN API", "PostgreSQL", "PM2"],
-    "githubUrl": "https://github.com/yourgithub/repo",
-    "liveUrl": "https://live-demo.com"
+    "id": "morm",
+    "title": "Morm: Golang MongoDB ODM",
+    "description": "A lightweight Object Document Mapper (ODM) for Golang, inspired by Mongoose. Built on top of the official MongoDB Go driver and reflection API for developer-friendly database interactions.",
+    "techStack": ["Go", "MongoDB Driver", "Reflection API"],
+    "githubUrl": "https://github.com/devsamahd/morm",
+    "liveUrl": ""
   },
   {
-    "id": "6",
-    "title": "Allwebtool",
-    "description": "A centralized directory and aggregator for multiple useful AI tools from around the web, offering a single streamlined interface for users to discover and interact with various AI models.",
-    "techStack": ["Next.js", "TypeScript", "OpenAI API", "Tailwind CSS", "Prisma"],
-    "githubUrl": "https://github.com/yourgithub/repo",
-    "liveUrl": "https://live-demo.com"
-  },
-  {
-    "id": "7",
-    "title": "Morm",
-    "description": "Morm is a powerful Object Document Mapper (ODM) for Golang, inspired by Mongoose, designed to be developer-friendly and feature-rich for seamless MongoDB integration.",
-    "techStack": ["Go", "MongoDB Go Driver", "Reflection API"],
-    "githubUrl": "https://github.com/yourgithub/repo",
-    "liveUrl": "https://live-demo.com"
-  },
-  {
-    "id": "8",
-    "title": "Dehub.io",
-    "description": "A Web3 video streaming platform that leverages decentralized storage and blockchain technology to give creators censorship-resistant content distribution and direct monetization.",
-    "techStack": ["Next.js", "TypeScript", "IPFS", "Livepeer", "Ethers.js"],
-    "githubUrl": "https://github.com/yourgithub/repo",
-    "liveUrl": "https://live-demo.com"
-  },
-  {
-    "id": "9",
-    "title": "Sociallio",
-    "description": "An advanced marketing automation system that allows users to schedule posts, track analytics, and manage multiple social media accounts from a single unified dashboard.",
+    "id": "sociallio",
+    "title": "Sociallio: Marketing Automation Engine",
+    "description": "An automated social media management system featuring scheduled publishing, analytics tracking, and multi-account queue orchestration using Redis and BullMQ.",
     "techStack": ["Next.js", "Node.js", "PostgreSQL", "Redis", "BullMQ"],
-    "githubUrl": "https://github.com/yourgithub/repo",
-    "liveUrl": "https://live-demo.com"
+    "githubUrl": "https://github.com/devsamahd/sociallio",
+    "liveUrl": ""
+  },
+  {
+    "id": "dehub",
+    "title": "Dehub.io: Web3 Streaming Platform",
+    "description": "A decentralized video streaming platform leveraging IPFS and Livepeer for censorship-resistant media distribution and direct tokenized creator monetization.",
+    "techStack": ["Next.js", "TypeScript", "IPFS", "Livepeer", "Ethers.js"],
+    "githubUrl": "https://github.com/devsamahd/dehub",
+    "liveUrl": ""
+  },
+  {
+    "id": "allwebtool",
+    "title": "Allwebtool: AI Directory Aggregator",
+    "description": "A centralized directory and aggregator for top AI tools, offering a unified portal for discovering, comparing, and testing AI models.",
+    "techStack": ["Next.js", "TypeScript", "OpenAI API", "Tailwind CSS", "Prisma"],
+    "githubUrl": "https://github.com/devsamahd/allwebtool",
+    "liveUrl": ""
   }
 ]

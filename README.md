@@ -1,52 +1,59 @@
 # Hi, I'm Abdulsamad 👋 
-### Fullstack Software Engineer | Backend & Systems Architecture | AI & Web3 
+### Senior Fullstack Software Engineer | Backend & Systems Architecture | AI & Web3
 
-I am a Fullstack Developer with a deep focus on backend infrastructure, scalable system design, and emerging technologies. I help businesses and founders build fast, resilient applications—whether that means architecting low-latency APIs, deploying containerized microservices, integrating LLMs, or developing decentralized applications (dApps).
+I am a Fullstack & Systems Infrastructure Developer with a deep focus on scalable backend system design, microservices, and emerging technologies. I build fast, resilient applications—architecting low-latency APIs, deploying containerized microservices, building AI RAG pipelines, and developing decentralized Web3 applications (dApps).
 
-I thrive on solving complex technical challenges and delivering production-ready code that scales seamlessly.
+Creator of **Zentramesh**—a core networking and ISP management engine powering platforms like **Netra.ng** and **Superkonnect** that serve hundreds of active users and manage millions of NGN in subscription revenue.
 
 ---
 
-## 🚀 What I Bring to the Table
+## ⚡ Featured Ecosystem: Zentramesh
+* **Zentramesh Network Engine:** Enterprise networking and ISP bandwidth management solution. Interfaces directly with cloud-hosted TP-Link Omada SDN controllers across ER605 routers and EAP 650 access points to handle automated subscriber authentication, dynamic bandwidth shaping, captive portal access, and multi-tier billing.
 
-* **Robust Backend Systems:** Architecting secure, high-throughput APIs and microservices using Node.js, Go, and PHP.
-* **Next-Gen Web & Mobile:** Delivering responsive, highly optimized user experiences with Next.js, React, and SwiftUI.
-* **AI Integration:** Embedding intelligence into applications using modern LLMs, prompt engineering, and RAG architectures.
-* **Web3 & Decentralization:** Bridging the gap between Web2 and Web3 with smart contract integration and dApp development.
-* **DevOps & Infrastructure:** Automating deployments and ensuring maximum uptime with Docker, Kubernetes, and AWS.
+---
+
+## 🚀 Key Featured Projects
+
+* **Zentramesh (Core Network & ISP Infrastructure):** Powers Netra.ng & Superkonnect, serving 100s of active users and managing millions of NGN in revenue. (*Go, Node.js, Next.js, Omada SDN API, PostgreSQL, Redis, Docker*).
+* **Tonzscrow:** Trustless Web3 escrow API integrating TON smart contracts (Tact) for multi-sig fund release workflows. (*Go, Tact, PostgreSQL, TON*).
+* **AI-Powered RAG Microservice:** Asynchronous document ingestion and context-aware intelligence service. (*Node.js, Express, OpenAI API, RabbitMQ, Redis, Vector DB*).
+* **High-Frequency Market Streaming Engine:** Low-latency WebSocket crypto ticker streaming pipeline handling 10k+ concurrent connections with <50ms latency. (*Rust, Next.js, WebSockets, Kafka*).
+* **Tonzilla:** Telegram mini app for end-to-end encrypted private file sharing over TON decentralized storage. (*Next.js, Telegram Mini Apps API, TON, Tailwind CSS*).
+* **Morm:** Golang MongoDB Object Document Mapper (ODM) reducing database boilerplate code by 40%. (*Go, MongoDB Driver, Reflection API*).
+* **Sociallio:** Automated multi-channel marketing schedule & background queue engine. (*Next.js, Node.js, PostgreSQL, Redis, BullMQ*).
+* **Dehub.io:** Decentralized Web3 video streaming and tokenized creator monetization platform. (*Next.js, IPFS, Livepeer, Ethers.js*).
 
 ---
 
 ## 🛠️ Technical Arsenal
 
 ### 🧠 Core Languages
-**TypeScript • JavaScript • Go • PHP • Swift**
+**TypeScript • JavaScript • Go (Golang) • Rust • PHP • Swift**
 
 ### 🌐 Frontend, Mobile & UI
-**Next.js • React.js • SwiftUI • Chakra UI • Gatsby.js**
+**Next.js • React.js • SwiftUI • Tailwind CSS • Chakra UI • Framer Motion**
 
-### ⚙️ Backend & Microservices
-**Node.js (NestJS, Express) • Go (Gin, Mux) • PHP (Laravel)**
+### ⚙️ Backend, Microservices & Systems
+**Node.js (NestJS, Express) • Go (Gin, Mux) • PHP (Laravel) • REST APIs • WebSockets • gRPC**
 **RabbitMQ • Apache Kafka • Zookeeper**
 
-### 🤖 AI & Web3 *(Emerging Tech)*
-**LLM Integration (OpenAI, Claude) • RAG Architectures • Prompt Engineering**
-**Ethers.js / Web3.js • dApp Architecture • Smart Contract Integration**
+### 🤖 AI & Web3 Infrastructure
+**RAG Architectures • OpenAI API • Vector Databases (Pinecone, PGVector)**
+**TON Blockchain • Smart Contracts (Tact) • Ethers.js / Web3.js • IPFS • Telegram Mini Apps API**
 
 ### 🗄️ Database & Caching
 **PostgreSQL • MySQL • MongoDB • Redis**
 
 ### ☁️ Cloud, DevOps & Observability
-**Docker • Kubernetes • AWS (EC2) • DigitalOcean • Linux (Ubuntu) • Nginx / Apache • Prometheus**
+**Docker • Kubernetes • AWS (EC2) • DigitalOcean • Linux (Ubuntu) • Nginx • PM2 • Prometheus**
 
 ---
 
-## 🤝 Let's Build Something Remarkable
-
-Whether you are scaling an existing platform, launching a Web3 startup, or looking to integrate AI into your workflow, I have the technical depth to bring your vision to life.
+## 🤝 Let's Connect & Build
 
 * **Email:** devsamahd@gmail.com
 * **LinkedIn:** https://linkedin.com/in/abdulsamad-abdulsalam-746617193
 * **Portfolio:** https://samahd.is-a.dev
+* **GitHub:** https://github.com/devsamahd
 
 > *"Build fast. Break nothing. Scale smart. Stay curious."* 🚀
