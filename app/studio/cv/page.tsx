@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { CvStudio } from "../../../components/CvStudio";
 import { StudioLogin } from "../../../components/StudioLogin";
 import {
-  isConfigured,
+  cmsConfiguration,
   localDevelopment,
   SESSION_COOKIE,
   validSession,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default async function CvPage() {
   const local = localDevelopment((await headers()).get("host"));
   if (!local && !validSession((await cookies()).get(SESSION_COOKIE)?.value))
-    return <StudioLogin configured={isConfigured()} />;
+    return <StudioLogin configuration={cmsConfiguration()} />;
   return (
     <CvStudio
       initial={await readCvState()}

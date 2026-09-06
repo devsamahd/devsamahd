@@ -1,7 +1,8 @@
 "use client";
 import { useState, type FormEvent } from "react";
 import { ArrowRight, LockKeyhole, ArrowUpRight } from "lucide-react";
-export function StudioLogin({ configured }: { configured: boolean }) {
+import type { CmsConfiguration } from "../lib/cms-auth";
+export function StudioLogin({ configuration }: { configuration: CmsConfiguration }) {
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
   async function login(event: FormEvent<HTMLFormElement>) {
@@ -41,7 +42,7 @@ export function StudioLogin({ configured }: { configured: boolean }) {
         </span>
         <h1>A space for your next chapter.</h1>
         <p>Keep your work, words, and portfolio up to date.</p>
-        {configured ? (
+        {configuration.ready ? (
           <form onSubmit={login}>
             <label className="field">
               Studio password
@@ -67,10 +68,27 @@ export function StudioLogin({ configured }: { configured: boolean }) {
           <div className="setup-note">
             <strong>One-time setup</strong>
             <p>
-              Set <code>CMS_PASSWORD</code> (24+ characters) and{" "}
-              <code>CMS_SESSION_SECRET</code> (32+ characters) in your server
-              environment, then restart the app.
+              The running server has not loaded both required settings. For a
+              local run, put them in <code>.env.local</code> (not{" "}
+              <code>.env.example</code>) and restart the server. For a hosted
+              run, add them to the app&apos;s runtime environment and redeploy.
             </p>
+            <ul>
+              <li>
+                <code>CMS_PASSWORD</code>: {configuration.password.valid
+                  ? "loaded"
+                  : configuration.password.loaded
+                    ? `too short (${configuration.password.length}/24 characters)`
+                    : "missing"}
+              </li>
+              <li>
+                <code>CMS_SESSION_SECRET</code>: {configuration.sessionSecret.valid
+                  ? "loaded"
+                  : configuration.sessionSecret.loaded
+                    ? `too short (${configuration.sessionSecret.length}/32 characters)`
+                    : "missing"}
+              </li>
+            </ul>
           </div>
         )}
         <a href="/" className="text-link">

@@ -1,16 +1,38 @@
 import { createHmac, timingSafeEqual, randomBytes } from "node:crypto";
 export const SESSION_COOKIE = "portfolio_studio";
 export const SESSION_SECONDS = 60 * 60 * 8;
-const signingKey = () => process.env.CMS_SESSION_SECRET || "";
+const environmentValue = (key: "CMS_PASSWORD" | "CMS_SESSION_SECRET") =>
+  process.env[key]?.trim() || "";
+export type CmsConfiguration = {
+  ready: boolean;
+  password: { loaded: boolean; length: number; valid: boolean };
+  sessionSecret: { loaded: boolean; length: number; valid: boolean };
+};
+export function cmsConfiguration(): CmsConfiguration {
+  const password = environmentValue("CMS_PASSWORD");
+  const sessionSecret = environmentValue("CMS_SESSION_SECRET");
+  return {
+    ready: password.length >= 24 && sessionSecret.length >= 32,
+    password: {
+      loaded: password.length > 0,
+      length: password.length,
+      valid: password.length >= 24,
+    },
+    sessionSecret: {
+      loaded: sessionSecret.length > 0,
+      length: sessionSecret.length,
+      valid: sessionSecret.length >= 32,
+    },
+  };
+}
+const signingKey = () => environmentValue("CMS_SESSION_SECRET");
 export function isConfigured() {
-  return (
-    (process.env.CMS_PASSWORD?.length || 0) >= 24 && signingKey().length >= 32
-  );
+  return cmsConfiguration().ready;
 }
 export function localDevelopment(host: string | null) {
   return (
     process.env.NODE_ENV === "development" &&
-    !process.env.CMS_PASSWORD &&
+    !environmentValue("CMS_PASSWORD") &&
     ["localhost", "127.0.0.1", "[::1]"].includes(
       (host || "").replace(/:\d+$/, ""),
     )
@@ -25,7 +47,7 @@ export function passwordMatches(password: string) {
   if (!isConfigured()) return false;
   const hash = (value: string) =>
     createHmac("sha256", signingKey()).update(value).digest("hex");
-  return equals(hash(password), hash(process.env.CMS_PASSWORD!));
+  return equals(hash(password), hash(environmentValue("CMS_PASSWORD")));
 }
 export function issueSession(now = Date.now()) {
   if (!isConfigured())

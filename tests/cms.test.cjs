@@ -137,6 +137,23 @@ test("production sessions require configuration, expire, and reject tampering", 
   assert.equal(auth.validSession(token, now), false);
   assert.equal(auth.localDevelopment("localhost:3000"), false);
 });
+test("configuration diagnostics trim values and identify incomplete settings", () => {
+  process.env.CMS_PASSWORD = `  ${"p".repeat(24)}  `;
+  process.env.CMS_SESSION_SECRET = `  ${"s".repeat(32)}  `;
+  assert.deepEqual(auth.cmsConfiguration(), {
+    ready: true,
+    password: { loaded: true, length: 24, valid: true },
+    sessionSecret: { loaded: true, length: 32, valid: true },
+  });
+  process.env.CMS_PASSWORD = "short";
+  const incomplete = auth.cmsConfiguration();
+  assert.equal(incomplete.ready, false);
+  assert.deepEqual(incomplete.password, {
+    loaded: true,
+    length: 5,
+    valid: false,
+  });
+});
 test("development bypass is limited to localhost and is disabled when a password is set", () => {
   process.env.NODE_ENV = "development";
   delete process.env.CMS_PASSWORD;

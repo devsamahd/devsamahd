@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Studio } from "../../components/Studio";
 import { StudioLogin } from "../../components/StudioLogin";
 import {
-  isConfigured,
+  cmsConfiguration,
   localDevelopment,
   SESSION_COOKIE,
   validSession,
@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 export default async function StudioPage() {
   const local = localDevelopment((await headers()).get("host"));
   const signedIn = validSession((await cookies()).get(SESSION_COOKIE)?.value);
-  if (!local && !signedIn) return <StudioLogin configured={isConfigured()} />;
+  if (!local && !signedIn)
+    return <StudioLogin configuration={cmsConfiguration()} />;
   return <Studio initialState={await readState()} local={local} />;
 }
