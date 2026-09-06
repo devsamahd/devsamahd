@@ -29,8 +29,8 @@
         "Redis",
         "Docker"
       ],
-      "githubUrl": "https://github.com/devsamahd/zentramesh",
-      "liveUrl": "https://netra.ng",
+      "githubUrl": "",
+      "liveUrl": "https://zentramesh.com",
       "featured": true,
       "category": "Platforms"
     },
@@ -45,6 +45,22 @@
       "category": "Developer tools"
     },
     {
+      "id": "Netra",
+      "title": "Netra",
+      "description": "Powered by Zentramesh, Netra provides seamless captive portal authentication, dynamic voucher generation, and real-time subscription management for high-density internet access networks.",
+      "techStack": [
+        "Next.js",
+        "Node.js",
+        "Zentramesh Engine",
+        "PostgreSQL",
+        "Tailwind CSS"
+      ],
+      "githubUrl": "",
+      "liveUrl": "https://netra.ng",
+      "featured": false,
+      "category": "Platforms"
+    },
+    {
       "id": "superkonnect",
       "title": "Superkonnect",
       "description": "Powered by Zentramesh, Superkonnect provides seamless captive portal authentication, dynamic voucher generation, and real-time subscription management for high-density internet access networks.",
@@ -55,8 +71,8 @@
         "PostgreSQL",
         "Tailwind CSS"
       ],
-      "githubUrl": "https://github.com/devsamahd/superkonnect",
-      "liveUrl": "https://superkonnect.com",
+      "githubUrl": "",
+      "liveUrl": "https://superkonnect.com.ng",
       "featured": false,
       "category": "Platforms"
     },
