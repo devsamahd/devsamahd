@@ -19,7 +19,7 @@
     {
       "id": "zentramesh",
       "title": "Zentramesh",
-      "description": "Core networking engine powering Netra.ng and Superkonnect. Interfaces with cloud-hosted TP-Link Omada SDN controllers (ER605 routers & EAP 650 APs) to automate user authentication, billing, and bandwidth shaping—serving hundreds of active users and managing millions of NGN in revenue.",
+      "description": "Core networking engine powering Netra.ng and Superkonnect. Interfaces with cloud-hosted TP-Link Omada SDN controllers (ER605 routers & EAP 650 APs) to automate user authentication, billing, and bandwidth shaping, serving hundreds of active users and managing millions of NGN in revenue.",
       "techStack": [
         "Go",
         "Node.js",
