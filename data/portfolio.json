@@ -57,6 +57,16 @@
       ],
       "githubUrl": "https://github.com/devsamahd/superkonnect",
       "liveUrl": "https://superkonnect.com",
+      "featured": false,
+      "category": "Platforms"
+    },
+    {
+      "id": "unideals",
+      "title": "UniDeals",
+      "description": "A student discount platform for discovering exclusive brand offers and helping partners reach a focused student audience. A product where marketplace workflows, partner data, and a simple redemption experience have to stay dependable.",
+      "techStack": ["Marketplace", "Student discounts", "Partner platform"],
+      "githubUrl": "",
+      "liveUrl": "https://myunideals.com",
       "featured": true,
       "category": "Platforms"
     },

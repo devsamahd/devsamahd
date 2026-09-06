@@ -65,12 +65,20 @@ function request(method, body, options = {}) {
   });
 }
 test("initial portfolio content validates and unsafe links and duplicate IDs are rejected", () => {
-  assert.equal(validateContent(clone()).projects.length, 9);
+  assert.equal(validateContent(clone()).projects.length, 10);
   assert.equal(
     clone().projects.some((p) => p.id === "tonzscrow" || p.id === "morm"),
     false,
   );
   assert.equal(clone().projects.find((p) => p.id === "goose").featured, true);
+  assert.equal(
+    clone().projects.find((p) => p.id === "unideals").featured,
+    true,
+  );
+  assert.equal(
+    clone().projects.find((p) => p.id === "superkonnect").featured,
+    false,
+  );
   const content = clone();
   content.profile.resumeUrl = "//evil.example";
   assert.throws(() => validateContent(content), /valid link/);

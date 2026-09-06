@@ -114,6 +114,8 @@ test("backend, platform, and full stack presets start from real portfolio facts 
     "Backend & Platform Engineer",
   );
   assert.ok(state.cv.projects.some((p) => p.id === "goose"));
+  assert.ok(state.cv.projects.some((p) => p.id === "unideals"));
+  assert.ok(!state.cv.projects.some((p) => p.id === "superkonnect"));
   assert.ok(!cvText(state.cv).includes("Tonzscrow"));
   assert.ok(!cvText(state.cv).includes("PROFESSIONAL SUMMARY\n\n"));
 });
