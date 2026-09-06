@@ -1,6 +1,6 @@
 import { validateCv, type Cv, type CvEntry } from "./cv";
 export type CvSuggestion = { cv: Cv; notes: string[] };
-export const aiConfigured = () =>
+export const tailoringConfigured = () =>
   !!process.env.OPENAI_API_KEY && !!process.env.OPENAI_MODEL;
 export class TailorError extends Error {
   constructor(
@@ -32,7 +32,7 @@ const schema = {
 };
 export function applySuggestion(source: Cv, raw: unknown): CvSuggestion {
   if (!raw || typeof raw !== "object")
-    throw new Error("The AI suggestion was incomplete. Your CV is unchanged.");
+    throw new Error("The automated suggestion was incomplete. Your CV is unchanged.");
   const result = raw as Record<string, unknown>;
   const list = (value: unknown, max = 100): string[] => {
     if (
@@ -40,29 +40,29 @@ export function applySuggestion(source: Cv, raw: unknown): CvSuggestion {
       value.length > max ||
       value.some((v) => typeof v !== "string" || v.length > 6000)
     )
-      throw new Error("The AI suggestion was invalid. Your CV is unchanged.");
+      throw new Error("The automated suggestion was invalid. Your CV is unchanged.");
     return value as string[];
   };
   const select = (value: unknown, entries: CvEntry[], complete: boolean) => {
     if (!Array.isArray(value) || value.length > entries.length)
-      throw new Error("AI attempted to add unsupported work history.");
+      throw new Error("The suggestion attempted to add unsupported work history.");
     const seen = new Set<string>();
     const selected = value.map((raw) => {
-      if (!raw || typeof raw !== "object") throw new Error("Invalid AI entry.");
+      if (!raw || typeof raw !== "object") throw new Error("Invalid suggestion entry.");
       const entry = entries.find((e) => e.id === raw.id);
       if (!entry || seen.has(entry.id))
-        throw new Error("AI attempted to add unsupported work history.");
+        throw new Error("The suggestion attempted to add unsupported work history.");
       seen.add(entry.id);
       return { ...entry, bullets: list(raw.bullets, 20) };
     });
     if (complete && selected.length !== entries.length)
-      throw new Error("AI omitted employment history. Your CV is unchanged.");
+      throw new Error("The suggestion omitted employment history. Your CV is unchanged.");
     return selected;
   };
   const skills = list(result.skills);
   if (skills.some((s) => !source.skills.includes(s)))
     throw new Error(
-      "AI suggested a skill not present in your CV. Add it manually only if it is accurate.",
+      "The suggestion included a skill not present in your CV. Add it manually only if it is accurate.",
     );
   const cv = validateCv({
     ...source,
@@ -74,9 +74,9 @@ export function applySuggestion(source: Cv, raw: unknown): CvSuggestion {
   return { cv, notes: list(result.notes, 15) };
 }
 export async function tailorCv(source: Cv, job: string): Promise<CvSuggestion> {
-  if (!aiConfigured())
+  if (!tailoringConfigured())
     throw new TailorError(
-      "AI isn’t connected. You can still edit, save presets, and export your CV manually.",
+      "Suggestions aren’t available right now. You can still edit, save presets, and export your CV manually.",
     );
   if (job.trim().length < 40 || job.length > 20000)
     throw new TailorError(
@@ -132,14 +132,14 @@ export async function tailorCv(source: Cv, job: string): Promise<CvSuggestion> {
     });
   } catch {
     throw new TailorError(
-      "The AI service didn’t respond. Your CV is unchanged; keep editing manually or try again.",
+      "The tailoring service didn’t respond. Your CV is unchanged; keep editing manually or try again.",
     );
   }
   if (!response.ok)
     throw new TailorError(
       response.status === 429
-        ? "The AI service is busy or has reached its usage limit. Manual editing and exports still work."
-        : "The AI model is unavailable. Your CV is unchanged; manual editing and exports still work.",
+        ? "The tailoring service is busy or has reached its usage limit. Manual editing and exports still work."
+        : "The tailoring model is unavailable. Your CV is unchanged; manual editing and exports still work.",
     );
   try {
     const body = await response.json();
@@ -162,7 +162,7 @@ export async function tailorCv(source: Cv, job: string): Promise<CvSuggestion> {
     return applySuggestion(source, JSON.parse(text));
   } catch {
     throw new TailorError(
-      "The AI response couldn’t be safely applied. Your CV is unchanged; please edit manually or retry.",
+      "The tailoring response couldn’t be safely applied. Your CV is unchanged; please edit manually or retry.",
     );
   }
 }

@@ -12,6 +12,7 @@ import {
   Code2,
 } from "lucide-react";
 import type { PortfolioContent, Project } from "../lib/content";
+import { siteUrl } from "../lib/site";
 function ProjectLinks({ project }: { project: Project }) {
   return (
     <div className="project-links">
@@ -51,6 +52,44 @@ export function Portfolio({
       new Set(projects.map((project) => project.category).filter(Boolean)),
     ),
   ];
+  const structuredData = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        name: p.name,
+        url: siteUrl.toString(),
+        jobTitle: p.role,
+        description: p.intro,
+        email: `mailto:${p.email}`,
+        address: { "@type": "PostalAddress", addressLocality: p.location },
+        sameAs: [p.github, p.linkedin].filter(Boolean),
+        knowsAbout: skills.flatMap((group) => group.skills),
+      },
+      {
+        "@type": "WebSite",
+        name: `${p.name} portfolio`,
+        url: siteUrl.toString(),
+        description: p.intro,
+        publisher: { "@type": "Person", name: p.name },
+      },
+      {
+        "@type": "ItemList",
+        name: "Selected work",
+        itemListElement: featured.map((project, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          item: {
+            "@type": "CreativeWork",
+            name: project.title,
+            description: project.description,
+            url: project.liveUrl || project.githubUrl || siteUrl.toString(),
+            keywords: project.techStack.join(", "),
+          },
+        })),
+      },
+    ],
+  }).replace(/</g, "\\u003c");
   async function copyEmail() {
     try {
       await navigator.clipboard.writeText(p.email);
@@ -63,6 +102,12 @@ export function Portfolio({
   }
   return (
     <div className={`portfolio ${preview ? "is-preview" : ""}`}>
+      {!preview && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredData }}
+        />
+      )}
       <a className="skip-link" href="#main">
         Skip to content
       </a>

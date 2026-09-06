@@ -69,7 +69,7 @@ def create_resume():
     sub_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     sub_p.paragraph_format.space_after = Pt(6)
     
-    run_sub = sub_p.add_run("Senior Fullstack & Systems Infrastructure Engineer | AI & Web3 Architect")
+    run_sub = sub_p.add_run("Backend & Platform Engineer | Systems Infrastructure")
     run_sub.font.name = 'Calibri'
     run_sub.font.size = Pt(11.5)
     run_sub.font.bold = True
@@ -79,7 +79,7 @@ def create_resume():
     contact_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     contact_p.paragraph_format.space_after = Pt(14)
     
-    contact_text = "Abuja, Nigeria  |  devsamahd@gmail.com  |  Portfolio: https://samahd.is-a.dev\nLinkedIn: linkedin.com/in/abdulsamad-abdulsalam-746617193  |  GitHub: github.com/devsamahd"
+    contact_text = "Abuja, Nigeria  |  devsamahd@gmail.com  |  Portfolio: https://samahd.is-a.dev\nLinkedIn: linkedin.com/in/devsamahd  |  GitHub: github.com/devsamahd"
     run_contact = contact_p.add_run(contact_text)
     run_contact.font.size = Pt(9.5)
     run_contact.font.color.rgb = TEXT_MUTED
@@ -106,7 +106,7 @@ def create_resume():
     p_sum.paragraph_format.space_after = Pt(8)
     p_sum.paragraph_format.line_spacing = 1.15
     run_sum = p_sum.add_run(
-        "Results-driven Senior Fullstack & Backend Systems Engineer with over 4 years of hands-on experience architecting high-throughput microservices, scalable distributed networks, AI RAG pipelines, and Web3 decentralized applications. Creator of Zentramesh—a high-performance network infrastructure engine powering enterprise ISP management and customer billing systems (Netra.ng and Superkonnect) serving hundreds of active users and managing millions of NGN in revenue. Expert in Go (Golang), Node.js, TypeScript, Rust, Next.js, and cloud orchestration (Docker, Redis, PostgreSQL). Proven capability to design resilient systems with high availability, low-latency performance (<50ms), and strict API security standards."
+        "Results-driven backend and platform engineer with over 4 years of hands-on experience architecting high-throughput microservices, scalable distributed networks, data retrieval services, and Web3 applications. Creator of Zentramesh—a high-performance network infrastructure engine powering enterprise ISP management and customer billing systems (Netra.ng and Superkonnect) serving hundreds of active users and managing millions of NGN in revenue. Expert in Go (Golang), Node.js, TypeScript, Rust, Next.js, and cloud orchestration (Docker, Redis, PostgreSQL). Proven capability to design resilient systems with high availability, low-latency performance (<50ms), and strict API security standards."
     )
 
     # ==========================================
@@ -127,7 +127,7 @@ def create_resume():
 
     skills_data = [
         ("Backend & Distributed Systems:", "Go (Golang), Node.js (Express, NestJS), Rust, PHP (Laravel), RESTful APIs, WebSockets, gRPC, Microservices"),
-        ("AI & Intelligent Automation:", "Retrieval-Augmented Generation (RAG), OpenAI API, Vector Databases (PGVector, Pinecone), Async Queue Processing (RabbitMQ, Redis)"),
+        ("Data & Automation:", "Document retrieval, Vector Databases (PGVector, Pinecone), Async Queue Processing (RabbitMQ, Redis)"),
         ("Web3 & Blockchain Technology:", "TON Blockchain, Smart Contracts (Tact), Ethers.js, Web3.js, IPFS, Decentralized Escrow Protocols, Telegram Mini Apps API"),
         ("Cloud, DevOps & Databases:", "Docker, Kubernetes, AWS (EC2), Linux (Ubuntu), Nginx, Redis, PostgreSQL, MySQL, MongoDB, Kafka, BullMQ, PM2"),
         ("Frontend & Mobile UI:", "TypeScript, JavaScript, Next.js, React.js, SwiftUI, Tailwind CSS, Chakra UI, Framer Motion, HTML5/CSS3"),
@@ -176,11 +176,11 @@ def create_resume():
             ]
         },
         {
-            "name": "AI-Powered RAG Microservice",
-            "sub": "Node.js, Express, OpenAI API, Vector DB (PGVector/Pinecone), RabbitMQ, Redis",
+            "name": "Document Retrieval Microservice",
+            "sub": "Node.js, Express, Vector DB (PGVector/Pinecone), RabbitMQ, Redis",
             "bullets": [
                 "Designed an asynchronous PDF ingestion microservice that chunks extensive documents, generates high-dimensional vector embeddings, and indexes them in vector storage.",
-                "Integrated OpenAI models with RabbitMQ background message workers to execute context-aware RAG search queries with sub-second response times."
+                "Integrated RabbitMQ background message workers to execute context-aware document retrieval queries with sub-second response times."
             ]
         },
         {

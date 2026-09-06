@@ -119,7 +119,7 @@ test("backend, platform, and full stack presets start from real portfolio facts 
   assert.ok(!cvText(state.cv).includes("Tonzscrow"));
   assert.ok(!cvText(state.cv).includes("PROFESSIONAL SUMMARY\n\n"));
 });
-test("manual edits and presets persist independently of the portfolio without an AI service", async () => {
+test("manual edits and presets persist independently of the portfolio without a tailoring service", async () => {
   const state = fresh();
   state.cv.title = "Platform Engineer";
   state.job = job;
@@ -163,7 +163,7 @@ test("validation catches invalid links, duplicate presets, missing entry titles 
   state.job = "a".repeat(20001);
   assert.throws(() => validateWorkspace(state), /20,000/);
 });
-test("private CV reads, saves, AI and exports all require authentication; writes reject foreign origins", async () => {
+test("private CV reads, saves, tailoring and exports all require authentication; writes reject foreign origins", async () => {
   assert.equal((await route.GET(request("GET", null, false))).status, 401);
   assert.equal(
     (
@@ -233,10 +233,10 @@ test("CV API saves edits, reports conflicts, and marks private data uncacheable"
   const get = await route.GET(request("GET"));
   assert.equal(get.headers.get("cache-control"), "no-store");
 });
-test("AI unavailable, rate-limited, timeout, refusal, and malformed responses preserve the original CV", async () => {
+test("tailoring unavailable, rate-limited, timeout, refusal, and malformed responses preserve the original CV", async () => {
   const source = cv(),
     before = JSON.stringify(source);
-  await assert.rejects(tailorCv(source, job), /isn’t connected/);
+  await assert.rejects(tailorCv(source, job), /Suggestions aren’t available/);
   configureAi();
   global.fetch = async () => new Response("", { status: 429 });
   await assert.rejects(tailorCv(source, job), /usage limit/);
@@ -267,7 +267,7 @@ test("AI unavailable, rate-limited, timeout, refusal, and malformed responses pr
   }
   assert.equal(JSON.stringify(source), before);
 });
-test("successful AI tailoring excludes contact fields and preserves identity, employers, dates, and education", async () => {
+test("successful tailoring excludes contact fields and preserves identity, employers, dates, and education", async () => {
   configureAi();
   const source = cv(),
     plan = suggestion(source);
@@ -301,7 +301,7 @@ test("successful AI tailoring excludes contact fields and preserves identity, em
   );
   assert.equal(result.cv.projects.length, 1);
 });
-test("AI cannot add skills or projects, duplicate entries, or omit employment history", () => {
+test("tailoring cannot add skills or projects, duplicate entries, or omit employment history", () => {
   const source = cv();
   let plan = suggestion(source);
   plan.skills.push("Unsupported skill");

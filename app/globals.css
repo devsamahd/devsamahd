@@ -1776,7 +1776,7 @@ button {
   color: var(--accent);
   flex-shrink: 0;
 }
-.cv-ai-status {
+.cv-tailor-status {
   font-family: var(--font-mono);
   font-size: 11px;
   margin-left: auto;
@@ -1786,7 +1786,7 @@ button {
   border-radius: 4px;
   color: #c2ccb5;
 }
-.cv-ai-status.connected {
+.cv-tailor-status.connected {
   color: var(--accent);
   border-color: #597b60;
 }
@@ -2087,7 +2087,7 @@ button {
   .cv-paper {
     padding: 30px;
   }
-  .cv-ai-status {
+  .cv-tailor-status {
     display: none;
   }
   .cv-job-card {

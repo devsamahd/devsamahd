@@ -9,7 +9,7 @@
     "location": "Abuja, Nigeria",
     "email": "devsamahd@gmail.com",
     "github": "https://github.com/devsamahd",
-    "linkedin": "https://linkedin.com/in/abdulsamad-abdulsalam-746617193",
+    "linkedin": "https://linkedin.com/in/devsamahd",
     "availability": "Open to interesting opportunities",
     "now": "Building Zentramesh, the networking engine behind Netra.ng and Superkonnect.",
     "philosophy": "Build fast. Break nothing. Scale smart. Stay curious.",
@@ -72,20 +72,20 @@
     },
     {
       "id": "rag-microservice",
-      "title": "AI-Powered RAG Microservice",
-      "description": "An asynchronous Node.js microservice utilizing RabbitMQ and OpenAI API. Ingests thousands of PDF documents, generates vector embeddings, stores them in vector databases, and serves context-aware RAG queries with sub-second response times.",
+      "title": "Document Retrieval Microservice",
+      "description": "An asynchronous Node.js service using RabbitMQ and vector storage to ingest PDF documents, index their contents, and serve context-aware retrieval queries with sub-second response times.",
       "techStack": [
         "Node.js",
         "Express",
         "RabbitMQ",
-        "OpenAI API",
+        "Vector search",
         "Redis",
         "Vector DB"
       ],
       "githubUrl": "https://github.com/devsamahd/rag-microservice",
       "liveUrl": "",
       "featured": false,
-      "category": "AI"
+      "category": "Data systems"
     },
     {
       "id": "hft-websocket",
@@ -136,18 +136,18 @@
     {
       "id": "allwebtool",
       "title": "Allwebtool",
-      "description": "A centralized directory and aggregator for top AI tools, offering a unified portal for discovering, comparing, and testing AI models.",
+      "description": "A centralized directory and aggregator for developer tools, offering one place to discover, compare, and evaluate useful software services.",
       "techStack": [
         "Next.js",
         "TypeScript",
-        "OpenAI API",
+        "API integrations",
         "Tailwind CSS",
         "Prisma"
       ],
       "githubUrl": "https://github.com/devsamahd/allwebtool",
       "liveUrl": "",
       "featured": false,
-      "category": "AI"
+      "category": "Developer tools"
     }
   ],
   "experience": [
@@ -219,13 +219,13 @@
     },
     {
       "id": "2",
-      "title": "AI & Web3 integrations",
+      "title": "Protocols & integrations",
       "skills": [
         "Solidity",
         "Ethers.js",
-        "OpenAI API",
-        "RAG",
-        "LangChain",
+        "API integrations",
+        "Vector search",
+        "Queue processing",
         "Smart Contracts"
       ]
     }

@@ -9,7 +9,7 @@ import {
   validSession,
 } from "../../../lib/cms-auth";
 import { readCvState } from "../../../lib/cv-store";
-import { aiConfigured } from "../../../lib/cv-tailor";
+import { tailoringConfigured } from "../../../lib/cv-tailor";
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "CV workspace | Studio",
@@ -20,6 +20,9 @@ export default async function CvPage() {
   if (!local && !validSession((await cookies()).get(SESSION_COOKIE)?.value))
     return <StudioLogin configured={isConfigured()} />;
   return (
-    <CvStudio initial={await readCvState()} aiAvailable={aiConfigured()} />
+    <CvStudio
+      initial={await readCvState()}
+      tailoringAvailable={tailoringConfigured()}
+    />
   );
 }

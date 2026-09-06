@@ -12,7 +12,7 @@ import {
   Plus,
   Printer,
   Save,
-  Sparkles,
+  SlidersHorizontal,
   Trash2,
   Upload,
   X,
@@ -63,10 +63,10 @@ function Field({
 }
 export function CvStudio({
   initial,
-  aiAvailable,
+  tailoringAvailable,
 }: {
   initial: CvState;
-  aiAvailable: boolean;
+  tailoringAvailable: boolean;
 }) {
   const [saved, setSaved] = useState(initial);
   const [workspace, setWorkspace] = useState<CvWorkspace>({
@@ -235,7 +235,7 @@ export function CvStudio({
       setError(
         e instanceof Error
           ? e.message
-          : "AI couldn’t connect. Keep editing manually; your CV is unchanged.",
+          : "The suggestion service couldn’t connect. Keep editing manually; your CV is unchanged.",
       );
     } finally {
       setBusy("");
@@ -357,7 +357,7 @@ export function CvStudio({
           <span className="status-dot" />
           <p>
             Yours to shape.
-            <small>Manual editing, presets, and exports work without AI.</small>
+            <small>Manual editing, presets, and exports are always available.</small>
           </p>
         </div>
         <div className="cv-backup-actions">
@@ -461,16 +461,16 @@ export function CvStudio({
               <section className="cv-job-card">
                 <header>
                   <span className="cv-card-icon">
-                    <Sparkles size={19} />
+                    <SlidersHorizontal size={19} />
                   </span>
                   <div>
                     <h2>The role you have in mind</h2>
                     <p>Paste the full job description to tailor your CV.</p>
                   </div>
                   <span
-                    className={`cv-ai-status ${aiAvailable ? "connected" : ""}`}
+                    className={`cv-tailor-status ${tailoringAvailable ? "connected" : ""}`}
                   >
-                    {aiAvailable ? "AI configured" : "Manual mode"}
+                    {tailoringAvailable ? "Tailoring ready" : "Manual mode"}
                   </span>
                 </header>
                 <label className="field">
@@ -488,19 +488,19 @@ export function CvStudio({
                 </label>
                 <div className="cv-job-actions">
                   <p>
-                    {aiAvailable
-                      ? "Sends your career content and the job text to OpenAI. Contact fields stay local. Review every suggestion before applying it."
-                      : "AI is not configured. Use the job description as a reference while editing below; everything else is ready to use."}
+                    {tailoringAvailable
+                      ? "Sends your career content and the job text to the configured tailoring service. Contact fields stay local. Review every suggestion before applying it."
+                      : "Suggestions are unavailable right now. Use the job description as a reference while editing below; everything else is ready to use."}
                   </p>
                   <button
                     className="button"
-                    disabled={!!busy || !aiAvailable || job.trim().length < 40}
+                    disabled={!!busy || !tailoringAvailable || job.trim().length < 40}
                     onClick={tailor}
                   >
-                    <Sparkles size={15} />
+                    <SlidersHorizontal size={15} />
                     {busy === "tailor"
                       ? "Preparing suggestion…"
-                      : "Tailor with AI"}
+                      : "Suggest a focused version"}
                   </button>
                 </div>
               </section>
@@ -514,7 +514,7 @@ export function CvStudio({
                       <h2>A more focused version.</h2>
                     </div>
                     <button
-                      aria-label="Dismiss AI suggestion"
+                      aria-label="Dismiss tailoring suggestion"
                       className="icon-button"
                       onClick={() => setSuggestion(null)}
                     >
