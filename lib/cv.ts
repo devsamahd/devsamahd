@@ -88,20 +88,26 @@ export function initialCvState(content: PortfolioContent): CvState {
     ...base,
     title: "Backend Engineer",
     summary:
-      "Backend engineer building APIs, networking infrastructure, and asynchronous services with Go, Node.js, PostgreSQL, and Redis. Creator of Zentramesh, the network engine behind Netra.ng and Superkonnect. Comfortable delivering the frontend when a project needs end-to-end ownership.",
+      "Backend engineer with production experience building APIs, network automation, and developer tools with Go, Node.js, TypeScript, PostgreSQL, Redis, and Docker. Built Zentramesh, the network automation engine handling authentication, billing, and bandwidth shaping for hundreds of active users and millions of NGN in revenue. Built Goose, a type-safe MongoDB ODM for Go.",
+  };
+  const platform = {
+    ...base,
+    title: "Platform Engineer",
+    summary:
+      "Platform engineer building reliable services, network integrations, and developer tooling with Go, Node.js, PostgreSQL, Redis, and Docker. Built Zentramesh, which connects TP-Link Omada SDN controllers to automate authentication, billing, and bandwidth shaping for hundreds of active users and millions of NGN in revenue. Built Goose, a type-safe MongoDB ODM for Go.",
   };
   const fullstack = {
     ...base,
     title: "Full Stack Engineer",
     summary:
-      "Full stack engineer with a strong backend foundation, building applications with TypeScript, Next.js, Node.js, and Go. Experience spans network access and billing platforms, APIs, and the interfaces that make complex systems usable.",
+      "Full stack engineer with a strong backend foundation in TypeScript, Next.js, Node.js, Go, and SQL databases. Built network access and billing platforms, APIs, and developer tools; also designed a scalable marketing system and complex multi-step form builder with Next.js, Express.js, PHP, and MySQL.",
   };
   return {
     cv: base,
     job: "",
     presets: [
       { id: "backend", name: "Backend job", cv: backend, job: "" },
-      { id: "platform", name: "Platform job", cv: base, job: "" },
+      { id: "platform", name: "Platform job", cv: platform, job: "" },
       { id: "fullstack", name: "Full stack job", cv: fullstack, job: "" },
     ],
     revision: "initial",

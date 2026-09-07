@@ -116,6 +116,10 @@ test("backend, platform, and full stack presets start from real portfolio facts 
   assert.ok(state.cv.projects.some((p) => p.id === "goose"));
   assert.ok(state.cv.projects.some((p) => p.id === "unideals"));
   assert.ok(!state.cv.projects.some((p) => p.id === "superkonnect"));
+  assert.ok(state.presets[0].cv.summary.includes("millions of NGN in revenue"));
+  assert.ok(state.presets[1].cv.summary.includes("Omada SDN controllers"));
+  assert.ok(!state.cv.skills.includes("Kubernetes"));
+  assert.ok(!cvText(state.cv).includes("Terraform"));
   assert.ok(!cvText(state.cv).includes("Tonzscrow"));
   assert.ok(!cvText(state.cv).includes("PROFESSIONAL SUMMARY\n\n"));
 });

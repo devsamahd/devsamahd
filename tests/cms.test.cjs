@@ -65,7 +65,7 @@ function request(method, body, options = {}) {
   });
 }
 test("initial portfolio content validates and unsafe links and duplicate IDs are rejected", () => {
-  assert.equal(validateContent(clone()).projects.length, 10);
+  assert.equal(validateContent(clone()).projects.length, 11);
   assert.equal(
     clone().projects.some((p) => p.id === "tonzscrow" || p.id === "morm"),
     false,

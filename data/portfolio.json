@@ -3,9 +3,9 @@
     "name": "Abdulsamad Abdulsalam",
     "handle": "devsamahd",
     "role": "Backend & platform engineer",
-    "headline": "Behind every great product,\na system that holds.",
-    "intro": "I build APIs, platforms, and developer tools. My focus is the backend: reliable services, network infrastructure, and the foundations that help teams ship.",
-    "about": "I’m a backend and platform engineer working across APIs, distributed systems, network infrastructure, and developer tooling. I care about how software behaves beyond the happy path: the data, the queues, the deployment, and the people who maintain it. I can build the frontend too, which helps me carry a product from its foundations to a useful experience.",
+    "headline": "Systems that keep\nreal products moving.",
+    "intro": "I build backend systems and platform infrastructure for real users: APIs, network automation, and developer tools. Zentramesh handles access, billing, and bandwidth shaping for hundreds of active users and millions of NGN in revenue.",
+    "about": "Backend and platform engineer building production APIs, network automation, and developer tools with Go, Node.js, TypeScript, PostgreSQL, Redis, and Docker. I built Zentramesh, a networking engine that automates access, billing, and bandwidth shaping through TP-Link Omada SDN controllers for hundreds of active users and millions of NGN in revenue. I also built Goose, a type-safe MongoDB ODM for Go, and have designed scalable marketing systems and multi-step form flows. I’m targeting mid-level backend and platform roles where reliability and systems design matter.",
     "location": "Abuja, Nigeria",
     "email": "devsamahd@gmail.com",
     "github": "https://github.com/devsamahd",
@@ -172,7 +172,7 @@
       "role": "Freelance Software Engineer",
       "company": "Independent",
       "date": "Jan 2024 - Present",
-      "desc": "Delivered scalable full-stack freelance projects while completing university studies. Currently actively seeking full-time roles, bringing a strong passion for solving complex technical challenges."
+      "desc": "Delivered full-stack client projects while completing university studies, taking work from backend services and data flows through to the user-facing product experience."
     },
     {
       "id": "2",
@@ -186,7 +186,7 @@
       "role": "Backend Engineer (Contract)",
       "company": "Dreamax Ltd, Tel Aviv",
       "date": "Apr 2023 - Sep 2023",
-      "desc": "Architected a highly scalable marketing system and a complex multi-step form builder. Engineered robust solutions utilizing Next.js, Express.js, PHP, and MySQL with Knex and Objection.js."
+      "desc": "Architected a scalable marketing system and complex multi-step form builder, building the service layer and product flow with Next.js, Express.js, PHP, MySQL, Knex, and Objection.js."
     },
     {
       "id": "4",
@@ -216,7 +216,9 @@
         "Kafka",
         "Redis",
         "Docker",
-        "Kubernetes"
+        "REST API development",
+        "System architecture",
+        "Database design"
       ]
     },
     {
@@ -235,14 +237,14 @@
     },
     {
       "id": "2",
-      "title": "Protocols & integrations",
+      "title": "Network & developer tooling",
       "skills": [
-        "Solidity",
-        "Ethers.js",
+        "Network automation",
+        "SDN",
+        "Omada SDN API",
         "API integrations",
-        "Vector search",
         "Queue processing",
-        "Smart Contracts"
+        "Go generics"
       ]
     }
   ]
